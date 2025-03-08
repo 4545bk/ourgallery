@@ -1,0 +1,205 @@
+/* [project]/app/gallery/MemoryCard.module.css [app-client] (css) */
+@keyframes MemoryCard-module__H8OZ3G__bounceIn {
+  0% {
+    transform: scale(.1);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes MemoryCard-module__H8OZ3G__flip {
+  0% {
+    transform: rotateY(0);
+  }
+
+  50% {
+    transform: rotateY(180deg)scale(1.1);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes MemoryCard-module__H8OZ3G__shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px)rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(10px)rotate(5deg);
+  }
+
+  75% {
+    transform: translateX(-10px)rotate(-5deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes MemoryCard-module__H8OZ3G__bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes MemoryCard-module__H8OZ3G__spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.MemoryCard-module__H8OZ3G__card {
+  perspective: 1000px;
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+  animation: .5s ease-out MemoryCard-module__H8OZ3G__bounceIn;
+  transition: transform .3s;
+}
+
+.MemoryCard-module__H8OZ3G__card:hover {
+  transform: scale(1.05);
+  animation: .5s infinite MemoryCard-module__H8OZ3G__bounce;
+}
+
+.MemoryCard-module__H8OZ3G__cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s;
+  transform-style: preserve-3d;
+}
+
+.MemoryCard-module__H8OZ3G__flipped .MemoryCard-module__H8OZ3G__cardInner {
+  transform: rotateY(180deg);
+  animation: .6s MemoryCard-module__H8OZ3G__flip;
+}
+
+.MemoryCard-module__H8OZ3G__cardFront, .MemoryCard-module__H8OZ3G__cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px #0000004d;
+  background: linear-gradient(45deg, #ffeb3b, #f06292);
+}
+
+.MemoryCard-module__H8OZ3G__cardFront {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+}
+
+.MemoryCard-module__H8OZ3G__cardBack {
+  background: gold;
+  color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family: Comic Sans MS, cursive;
+  text-align: center;
+  border: 3px dashed #ff5722;
+  overflow: hidden;
+}
+
+.MemoryCard-module__H8OZ3G__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: none;
+}
+
+.MemoryCard-module__H8OZ3G__name {
+  position: absolute;
+  bottom: 10px;
+  margin: 0;
+  color: #ff5722;
+  font-size: 1.5rem;
+  font-family: Comic Sans MS, cursive;
+  text-shadow: 2px 2px 4px #0003;
+  background: #ffffffb3;
+  padding: .2rem .5rem;
+  border-radius: 5px;
+}
+
+.MemoryCard-module__H8OZ3G__shake {
+  animation: .5s MemoryCard-module__H8OZ3G__shake;
+}
+
+.MemoryCard-module__H8OZ3G__spin {
+  animation: .8s linear MemoryCard-module__H8OZ3G__spin;
+}
+
+.MemoryCard-module__H8OZ3G__questionForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.MemoryCard-module__H8OZ3G__answerInput {
+  padding: .5rem;
+  font-size: 1rem;
+  border: 2px solid #ff5722;
+  border-radius: 5px;
+  font-family: Comic Sans MS, cursive;
+  width: 80%;
+}
+
+.MemoryCard-module__H8OZ3G__submitButton {
+  padding: .3rem .8rem;
+  font-size: 1rem;
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Comic Sans MS, cursive;
+}
+
+.MemoryCard-module__H8OZ3G__submitButton:hover {
+  background: #e64a19;
+}
+
+.MemoryCard-module__H8OZ3G__victory {
+  animation: 1.5s infinite MemoryCard-module__H8OZ3G__victoryDance;
+}
+
+.MemoryCard-module__H8OZ3G__nextCard {
+  border: 3px solid gold;
+  box-shadow: 0 0 10px gold, 0 0 20px gold;
+}
+
+/*# sourceMappingURL=app_gallery_MemoryCard_module_b52d8e88.css.map*/
