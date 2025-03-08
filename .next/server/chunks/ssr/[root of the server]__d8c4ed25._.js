@@ -280,7 +280,7 @@ function Gallery() {
         },
         {
             name: "Simple",
-            photo: "/images/foto (11).jpg",
+            photo: "/images/foto (8).jpg",
             question: "What has hands but can’t clap?",
             answer: "Clock",
             audio: "/sounds/workwork.mp3",
@@ -289,7 +289,7 @@ function Gallery() {
         },
         {
             name: "Moderate",
-            photo: "/images/foto (12).jpg",
+            photo: "/images/foto (9).jpg",
             question: "What can you break, even if you never pick it up?",
             answer: "Promise",
             audio: "/sounds/rap2.mp3",
@@ -298,7 +298,7 @@ function Gallery() {
         },
         {
             name: "Simple",
-            photo: "/images/foto (13).jpg",
+            photo: "/images/foto (10).jpg",
             question: "What has a face and two hands but no arms or legs?",
             answer: "Clock",
             audio: "/sounds/rap3.mp3",
@@ -307,7 +307,7 @@ function Gallery() {
         },
         {
             name: "Moderate",
-            photo: "/images/foto (14).jpg",
+            photo: "/images/foto (11).jpg",
             question: "What has to be broken before you can use it?",
             answer: "Egg",
             audio: "/sounds/rap4.mp3",
@@ -316,7 +316,7 @@ function Gallery() {
         },
         {
             name: "Hard",
-            photo: "/images/foto (15).jpg",
+            photo: "/images/foto (12).jpg",
             question: "What has an endless supply of letters but starts empty?",
             answer: "Mailbox",
             audio: "/sounds/rap1.mp3",
@@ -325,7 +325,7 @@ function Gallery() {
         },
         {
             name: "Moderate",
-            photo: "/images/foto (16).jpg",
+            photo: "/images/foto (13).jpg",
             question: "What gets bigger the more you take away?",
             answer: "Hole",
             audio: "/sounds/rap2.mp3",
@@ -334,7 +334,7 @@ function Gallery() {
         },
         {
             name: "Simple",
-            photo: "/images/foto (17).jpg",
+            photo: "/images/foto (14).jpg",
             question: "What can you hold without touching it?",
             answer: "Breath",
             audio: "/sounds/rap3.mp3",
@@ -343,7 +343,7 @@ function Gallery() {
         },
         {
             name: "Moderate",
-            photo: "/images/foto (18).jpg",
+            photo: "/images/foto (15).jpg",
             question: "What has ears but can’t hear?",
             answer: "Corn",
             audio: "/sounds/rap4.mp3",
@@ -352,7 +352,7 @@ function Gallery() {
         },
         {
             name: "Hard",
-            photo: "/images/foto (19).jpg",
+            photo: "/images/foto (16).jpg",
             question: "What can travel around the world while staying in the same place?",
             answer: "Stamp",
             audio: "/sounds/rap1.mp3",
@@ -361,7 +361,7 @@ function Gallery() {
         },
         {
             name: "Simple",
-            photo: "/images/foto (20).jpg",
+            photo: "/images/foto (17).jpg",
             question: "What has one eye but can’t see?",
             answer: "Needle",
             audio: "/sounds/rap2.mp3",
@@ -369,8 +369,8 @@ function Gallery() {
             flipped: false
         },
         {
-            name: "Simple",
-            photo: "/images/foto (21).jpg",
+            name: "Dope",
+            photo: "/images/foto (18).jpg",
             question: "What has four legs but can't walk?",
             answer: "Table",
             audio: "/sounds/rap3.mp3",
@@ -378,8 +378,8 @@ function Gallery() {
             flipped: false
         },
         {
-            name: "Moderate",
-            photo: "/images/foto (22).jpg",
+            name: "Bang",
+            photo: "/images/foto (19).jpg",
             question: "What comes down but never goes up?",
             answer: "Rain",
             audio: "/sounds/rap4.mp3",
@@ -388,7 +388,7 @@ function Gallery() {
         },
         {
             name: "Hard",
-            photo: "/images/foto (23).jpg",
+            photo: "/images/foto (20).jpg",
             question: "What has a thumb and four fingers but isn’t alive?",
             answer: "Glove",
             audio: "/sounds/rap1.mp3",
@@ -397,7 +397,7 @@ function Gallery() {
         },
         {
             name: "Simple",
-            photo: "/images/foto (24).jpg",
+            photo: "/images/foto (21).jpg",
             question: "What can fill a room but takes up no space?",
             answer: "Light",
             audio: "/sounds/rap2.mp3",
@@ -405,8 +405,8 @@ function Gallery() {
             flipped: false
         },
         {
-            name: "Moderate",
-            photo: "/images/foto (25).jpg",
+            name: "Catch me if u can",
+            photo: "/images/foto (22).jpg",
             question: "What has a neck but no head?",
             answer: "Bottle",
             audio: "/sounds/rap3.mp3",
@@ -414,8 +414,8 @@ function Gallery() {
             flipped: false
         },
         {
-            name: "Simple",
-            photo: "/images/foto (26).jpg",
+            name: "Lis is Simple",
+            photo: "/images/foto (23).jpg",
             question: "What has hands but can’t clap?",
             answer: "Clock",
             audio: "/sounds/rap4.mp3",
@@ -425,7 +425,6 @@ function Gallery() {
     ];
     const [cards, setCards] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialFamilyMembers);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        // Load initial score and cards from LocalStorage
         const savedScore = Number(localStorage.getItem('totalScore')) || 0;
         const savedCards = localStorage.getItem('galleryCards');
         setTotalScore(savedScore);
@@ -487,7 +486,6 @@ function Gallery() {
         return ()=>document.head.removeChild(styleSheet);
     }, []);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        // Save score and cards to LocalStorage
         localStorage.setItem('totalScore', totalScore);
         localStorage.setItem('galleryCards', JSON.stringify(cards));
     }, [
@@ -501,24 +499,8 @@ function Gallery() {
         cards
     ]);
     const playSound = (soundFile, callback)=>{
-        if (!isAudioPlaying) {
-            setIsAudioPlaying(true);
-            console.log(`Attempting to play ${soundFile}`);
-            const audio = new Audio(soundFile);
-            audio.onended = ()=>{
-                console.log(`${soundFile} ended`);
-                setIsAudioPlaying(false);
-                if (callback) callback();
-            };
-            audio.play().then(()=>console.log(`${soundFile} started playing`)).catch((err)=>{
-                console.error(`${soundFile} failed:`, err.message);
-                setIsAudioPlaying(false);
-                if (callback) callback();
-            });
-        } else {
-            console.log(`Queuing ${soundFile} because audio is playing`);
-            setTimeout(()=>playSound(soundFile, callback), 100);
-        }
+        if ("TURBOPACK compile-time truthy", 1) return; // Prevent Audio creation on server
+        "TURBOPACK unreachable";
     };
     const handleAnswer = (index, userAnswer, flipCard)=>{
         console.log("Handling answer - Index:", index, "Answer:", userAnswer);
@@ -532,7 +514,7 @@ function Gallery() {
             });
             setTotalScore((prevScore)=>{
                 const newScore = prevScore + 10;
-                localStorage.setItem('totalScore', newScore); // Sync immediately
+                localStorage.setItem('totalScore', newScore);
                 return newScore;
             });
             flipCard();
@@ -563,7 +545,7 @@ function Gallery() {
                 children: "Family Gallery Challenge"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 354,
+                lineNumber: 353,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -585,7 +567,7 @@ function Gallery() {
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 365,
+                lineNumber: 364,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -601,7 +583,7 @@ function Gallery() {
                 children: "How to Play: Answer the trick question on each card’s back. Get it right to flip it, earn 10 points, and hear a unique message! Flip all cards to move on!"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 381,
+                lineNumber: 380,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -621,7 +603,7 @@ function Gallery() {
                 children: disco ? "Chill Out" : "Disco Party!"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 394,
+                lineNumber: 393,
                 columnNumber: 7
             }, this),
             allFlipped && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -642,12 +624,12 @@ function Gallery() {
                     children: "Next Challenge!"
                 }, void 0, false, {
                     fileName: "[project]/app/gallery/page.js",
-                    lineNumber: 413,
+                    lineNumber: 412,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 412,
+                lineNumber: 411,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -663,18 +645,18 @@ function Gallery() {
                         onAnswer: handleAnswer
                     }, member.index, false, {
                         fileName: "[project]/app/gallery/page.js",
-                        lineNumber: 433,
+                        lineNumber: 432,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 431,
+                lineNumber: 430,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/gallery/page.js",
-        lineNumber: 343,
+        lineNumber: 342,
         columnNumber: 5
     }, this);
 }

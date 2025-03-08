@@ -16,8 +16,17 @@ export default function Finale() {
 
   const router = useRouter();
 
-  const audio1Ref = useRef(new Audio("/sounds/whenteenager.mp3"));
-  const audio2Ref = useRef(new Audio("/sounds/eversince.mp3"));
+  // Use refs without initializing Audio immediately
+  const audio1Ref = useRef(null);
+  const audio2Ref = useRef(null);
+
+  // Initialize Audio objects only in the browser
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      audio1Ref.current = new Audio("/sounds/whenteenager.mp3");
+      audio2Ref.current = new Audio("/sounds/eversince.mp3");
+    }
+  }, []); // Empty dependency array: runs once on mount
 
   // Load total score from localStorage
   useEffect(() => {
@@ -44,12 +53,20 @@ export default function Finale() {
 
   // Handlers for new buttons
   const handleFirstButtonClick = () => {
-    audio1Ref.current.play().catch((err) => console.error("Audio 1 play failed:", err));
+    if (audio1Ref.current) {
+      audio1Ref.current
+        .play()
+        .catch((err) => console.error("Audio 1 play failed:", err));
+    }
     setFirstButtonClicked(true);
   };
 
   const handleSecondButtonClick = () => {
-    audio2Ref.current.play().catch((err) => console.error("Audio 2 play failed:", err));
+    if (audio2Ref.current) {
+      audio2Ref.current
+        .play()
+        .catch((err) => console.error("Audio 2 play failed:", err));
+    }
     setSecondButtonClicked(true);
     setCountdown(10); // Start countdown at 10 seconds
   };
@@ -66,7 +83,7 @@ export default function Finale() {
     }
   }, [secondButtonClicked, countdown, router]);
 
-  // Styles (adjust as needed to match your design)
+  // Styles (unchanged)
   const containerStyle = {
     display: "flex",
     flexDirection: "column",
@@ -111,7 +128,7 @@ export default function Finale() {
     border: "1px solid #cbd5e1",
   };
 
-  // Render logic
+  // Render logic (unchanged)
   if (!fakeButtonClicked) {
     return (
       <div style={containerStyle}>

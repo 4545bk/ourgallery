@@ -18,20 +18,27 @@ var _s = __turbopack_context__.k.signature();
 ;
 function Finale() {
     _s();
-    // Existing states (assumed from previous context)
     const [totalScore, setTotalScore] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const [fakeButtonClicked, setFakeButtonClicked] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [challengeSolved, setChallengeSolved] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [answer, setAnswer] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [feedback, setFeedback] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    // New states for the requested functionality
     const [firstButtonClicked, setFirstButtonClicked] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [secondButtonClicked, setSecondButtonClicked] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [countdown, setCountdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    // Audio references to persist across renders
-    const audio1Ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(new Audio("/sounds/whenteenager.mp3"));
-    const audio2Ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(new Audio("/sounds/eversince.mp3"));
+    // Use refs without initializing Audio immediately
+    const audio1Ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const audio2Ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // Initialize Audio objects only in the browser
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Finale.useEffect": ()=>{
+            if ("TURBOPACK compile-time truthy", 1) {
+                audio1Ref.current = new Audio("/sounds/whenteenager.mp3");
+                audio2Ref.current = new Audio("/sounds/eversince.mp3");
+            }
+        }
+    }["Finale.useEffect"], []); // Empty dependency array: runs once on mount
     // Load total score from localStorage
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Finale.useEffect": ()=>{
@@ -55,11 +62,15 @@ function Finale() {
     };
     // Handlers for new buttons
     const handleFirstButtonClick = ()=>{
-        audio1Ref.current.play().catch((err)=>console.error("Audio 1 play failed:", err));
+        if (audio1Ref.current) {
+            audio1Ref.current.play().catch((err)=>console.error("Audio 1 play failed:", err));
+        }
         setFirstButtonClicked(true);
     };
     const handleSecondButtonClick = ()=>{
-        audio2Ref.current.play().catch((err)=>console.error("Audio 2 play failed:", err));
+        if (audio2Ref.current) {
+            audio2Ref.current.play().catch((err)=>console.error("Audio 2 play failed:", err));
+        }
         setSecondButtonClicked(true);
         setCountdown(10); // Start countdown at 10 seconds
     };
@@ -86,7 +97,7 @@ function Finale() {
         countdown,
         router
     ]);
-    // Styles (adjust as needed to match your design)
+    // Styles (unchanged)
     const containerStyle = {
         display: "flex",
         flexDirection: "column",
@@ -126,7 +137,7 @@ function Finale() {
         borderRadius: "0.25rem",
         border: "1px solid #cbd5e1"
     };
-    // Render logic
+    // Render logic (unchanged)
     if (!fakeButtonClicked) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             style: containerStyle,
@@ -136,7 +147,7 @@ function Finale() {
                     children: "Congratulations!"
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 121,
+                    lineNumber: 135,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -148,7 +159,7 @@ function Finale() {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 122,
+                    lineNumber: 136,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -159,13 +170,13 @@ function Finale() {
                     children: "Claim Your Prize"
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 125,
+                    lineNumber: 139,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/finale/page.js",
-            lineNumber: 120,
+            lineNumber: 134,
             columnNumber: 7
         }, this);
     } else if (!challengeSolved) {
@@ -182,7 +193,7 @@ function Finale() {
                     }
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 138,
+                    lineNumber: 152,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -190,7 +201,7 @@ function Finale() {
                     children: "Oops, that’s only half the prize! To see the full prize, solve this riddle:"
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 143,
+                    lineNumber: 157,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -202,7 +213,7 @@ function Finale() {
                     children: '"I am not alive, but I grow; I don’t have lungs, but I need air; I don’t have a mouth, but water kills me. What am I?"'
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 146,
+                    lineNumber: 160,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -213,7 +224,7 @@ function Finale() {
                     placeholder: "Enter your answer"
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 149,
+                    lineNumber: 163,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -224,7 +235,7 @@ function Finale() {
                     children: "Submit"
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 156,
+                    lineNumber: 170,
                     columnNumber: 9
                 }, this),
                 feedback && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -235,13 +246,13 @@ function Finale() {
                     children: feedback
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 164,
+                    lineNumber: 178,
                     columnNumber: 22
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/finale/page.js",
-            lineNumber: 137,
+            lineNumber: 151,
             columnNumber: 7
         }, this);
     } else {
@@ -253,7 +264,7 @@ function Finale() {
                     children: "Congratulations! Here’s your full prize!"
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 170,
+                    lineNumber: 184,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -265,7 +276,7 @@ function Finale() {
                     }
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 171,
+                    lineNumber: 185,
                     columnNumber: 9
                 }, this),
                 !firstButtonClicked ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -276,7 +287,7 @@ function Finale() {
                     children: "Unlock Sound"
                 }, void 0, false, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 173,
+                    lineNumber: 187,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     children: [
@@ -285,7 +296,7 @@ function Finale() {
                             children: "Great job! You’ve unlocked the final step."
                         }, void 0, false, {
                             fileName: "[project]/app/finale/page.js",
-                            lineNumber: 183,
+                            lineNumber: 197,
                             columnNumber: 13
                         }, this),
                         !secondButtonClicked ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -296,7 +307,7 @@ function Finale() {
                             children: "Proceed"
                         }, void 0, false, {
                             fileName: "[project]/app/finale/page.js",
-                            lineNumber: 185,
+                            lineNumber: 199,
                             columnNumber: 15
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             style: pStyle,
@@ -307,24 +318,24 @@ function Finale() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/finale/page.js",
-                            lineNumber: 194,
+                            lineNumber: 208,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/finale/page.js",
-                    lineNumber: 182,
+                    lineNumber: 196,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/finale/page.js",
-            lineNumber: 169,
+            lineNumber: 183,
             columnNumber: 7
         }, this);
     }
 }
-_s(Finale, "LaGuPNoUplS0et+3T63E7Pgq0Ok=", false, function() {
+_s(Finale, "bsVZwF4vIaq/dkeudQTpVIcrtQQ=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

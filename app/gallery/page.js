@@ -83,10 +83,10 @@ export default function Gallery() {
       index: 7,
       flipped: false,
     },
-    
+  
       {
         name: "Simple",
-        photo: "/images/foto (11).jpg",
+        photo: "/images/foto (8).jpg",
         question: "What has hands but can’t clap?",
         answer: "Clock",
         audio: "/sounds/workwork.mp3",
@@ -95,7 +95,7 @@ export default function Gallery() {
       },
       {
         name: "Moderate",
-        photo: "/images/foto (12).jpg",
+        photo: "/images/foto (9).jpg",
         question: "What can you break, even if you never pick it up?",
         answer: "Promise",
         audio: "/sounds/rap2.mp3",
@@ -104,7 +104,7 @@ export default function Gallery() {
       },
       {
         name: "Simple",
-        photo: "/images/foto (13).jpg",
+        photo: "/images/foto (10).jpg",
         question: "What has a face and two hands but no arms or legs?",
         answer: "Clock",
         audio: "/sounds/rap3.mp3",
@@ -113,7 +113,7 @@ export default function Gallery() {
       },
       {
         name: "Moderate",
-        photo: "/images/foto (14).jpg",
+        photo: "/images/foto (11).jpg",
         question: "What has to be broken before you can use it?",
         answer: "Egg",
         audio: "/sounds/rap4.mp3",
@@ -122,7 +122,7 @@ export default function Gallery() {
       },
       {
         name: "Hard",
-        photo: "/images/foto (15).jpg",
+        photo: "/images/foto (12).jpg",
         question: "What has an endless supply of letters but starts empty?",
         answer: "Mailbox",
         audio: "/sounds/rap1.mp3",
@@ -131,7 +131,7 @@ export default function Gallery() {
       },
       {
         name: "Moderate",
-        photo: "/images/foto (16).jpg",
+        photo: "/images/foto (13).jpg",
         question: "What gets bigger the more you take away?",
         answer: "Hole",
         audio: "/sounds/rap2.mp3",
@@ -140,7 +140,7 @@ export default function Gallery() {
       },
       {
         name: "Simple",
-        photo: "/images/foto (17).jpg",
+        photo: "/images/foto (14).jpg",
         question: "What can you hold without touching it?",
         answer: "Breath",
         audio: "/sounds/rap3.mp3",
@@ -149,7 +149,7 @@ export default function Gallery() {
       },
       {
         name: "Moderate",
-        photo: "/images/foto (18).jpg",
+        photo: "/images/foto (15).jpg",
         question: "What has ears but can’t hear?",
         answer: "Corn",
         audio: "/sounds/rap4.mp3",
@@ -158,7 +158,7 @@ export default function Gallery() {
       },
       {
         name: "Hard",
-        photo: "/images/foto (19).jpg",
+        photo: "/images/foto (16).jpg",
         question: "What can travel around the world while staying in the same place?",
         answer: "Stamp",
         audio: "/sounds/rap1.mp3",
@@ -167,7 +167,7 @@ export default function Gallery() {
       },
       {
         name: "Simple",
-        photo: "/images/foto (20).jpg",
+        photo: "/images/foto (17).jpg",
         question: "What has one eye but can’t see?",
         answer: "Needle",
         audio: "/sounds/rap2.mp3",
@@ -175,8 +175,8 @@ export default function Gallery() {
         flipped: false
       },
       {
-        name: "Simple",
-        photo: "/images/foto (21).jpg",
+        name: "Dope",
+        photo: "/images/foto (18).jpg",
         question: "What has four legs but can't walk?",
         answer: "Table",
         audio: "/sounds/rap3.mp3",
@@ -184,8 +184,8 @@ export default function Gallery() {
         flipped: false
       },
       {
-        name: "Moderate",
-        photo: "/images/foto (22).jpg",
+        name: "Bang",
+        photo: "/images/foto (19).jpg",
         question: "What comes down but never goes up?",
         answer: "Rain",
         audio: "/sounds/rap4.mp3",
@@ -194,7 +194,7 @@ export default function Gallery() {
       },
       {
         name: "Hard",
-        photo: "/images/foto (23).jpg",
+        photo: "/images/foto (20).jpg",
         question: "What has a thumb and four fingers but isn’t alive?",
         answer: "Glove",
         audio: "/sounds/rap1.mp3",
@@ -203,7 +203,7 @@ export default function Gallery() {
       },
       {
         name: "Simple",
-        photo: "/images/foto (24).jpg",
+        photo: "/images/foto (21).jpg",
         question: "What can fill a room but takes up no space?",
         answer: "Light",
         audio: "/sounds/rap2.mp3",
@@ -211,8 +211,8 @@ export default function Gallery() {
         flipped: false
       },
       {
-        name: "Moderate",
-        photo: "/images/foto (25).jpg",
+        name: "Catch me if u can",
+        photo: "/images/foto (22).jpg",
         question: "What has a neck but no head?",
         answer: "Bottle",
         audio: "/sounds/rap3.mp3",
@@ -220,8 +220,8 @@ export default function Gallery() {
         flipped: false
       },
       {
-        name: "Simple",
-        photo: "/images/foto (26).jpg",
+        name: "Lis is Simple",
+        photo: "/images/foto (23).jpg",
         question: "What has hands but can’t clap?",
         answer: "Clock",
         audio: "/sounds/rap4.mp3",
@@ -237,7 +237,6 @@ export default function Gallery() {
   const [cards, setCards] = useState(initialFamilyMembers);
 
   useEffect(() => {
-    // Load initial score and cards from LocalStorage
     const savedScore = Number(localStorage.getItem('totalScore')) || 0;
     const savedCards = localStorage.getItem('galleryCards');
     setTotalScore(savedScore);
@@ -286,7 +285,6 @@ export default function Gallery() {
   }, []);
 
   useEffect(() => {
-    // Save score and cards to LocalStorage
     localStorage.setItem('totalScore', totalScore);
     localStorage.setItem('galleryCards', JSON.stringify(cards));
   }, [totalScore, cards]);
@@ -297,6 +295,7 @@ export default function Gallery() {
   }, [cards]);
 
   const playSound = (soundFile, callback) => {
+    if (typeof window === 'undefined') return; // Prevent Audio creation on server
     if (!isAudioPlaying) {
       setIsAudioPlaying(true);
       console.log(`Attempting to play ${soundFile}`);
@@ -329,7 +328,7 @@ export default function Gallery() {
       });
       setTotalScore(prevScore => {
         const newScore = prevScore + 10;
-        localStorage.setItem('totalScore', newScore); // Sync immediately
+        localStorage.setItem('totalScore', newScore);
         return newScore;
       });
       flipCard();
