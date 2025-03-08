@@ -23,7 +23,7 @@ export default function Finale() {
   // Initialize Audio objects only in the browser
   useEffect(() => {
     if (typeof window !== "undefined") {
-      audio1Ref.current = new Audio("/sounds/whenteenager.mp3");
+      audio1Ref.current = new Audio("/sounds/enenadejene.mp3");
       audio2Ref.current = new Audio("/sounds/eversince.mp3");
     }
   }, []); // Empty dependency array: runs once on mount
