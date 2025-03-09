@@ -23,8 +23,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const CipherCell = ({ cipher, index, onSolve })=>{
     const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
-    const [solved, setSolved] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(cipher.solved);
-    const highlightedRow = cipher.highlightedRow || 0; // Default to first row if not specified
+    const [solved, setSolved] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(cipher.solved || false);
+    const highlightedRow = cipher.highlightedRow || 0;
     const handleSubmit = (e)=>{
         e.preventDefault();
         if (!solved) {
@@ -36,48 +36,59 @@ const CipherCell = ({ cipher, index, onSolve })=>{
             }
         }
     };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        setSolved(cipher.solved || false);
+    }, [
+        cipher.solved
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "panel",
         style: {
             textAlign: "center"
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: solved ? "solved" : "",
                 style: {
                     display: "grid",
                     gridTemplateColumns: `repeat(${cipher.grid[0].length}, 1fr)`,
-                    gap: "5px",
+                    gap: "0.25rem",
                     margin: "1rem auto",
-                    maxWidth: "400px"
+                    maxWidth: "100%",
+                    width: "min(400px, 100%)"
                 },
                 children: cipher.grid.map((row, rowIdx)=>row.map((cell, colIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                width: "50px",
-                                height: "50px",
+                                width: "100%",
+                                height: "auto",
+                                aspectRatio: "1 / 1",
+                                minWidth: "30px",
+                                minHeight: "30px",
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
                                 background: "#333",
-                                border: `2px solid ${rowIdx === highlightedRow ? '#ff4444' : '#666'}`,
+                                border: `2px solid ${rowIdx === highlightedRow ? "#ff4444" : "#666"}`,
                                 color: "#e0e0e0",
-                                fontSize: "1.2rem",
+                                fontSize: "clamp(0.8rem, 2.5vw, 1.2rem)",
                                 fontFamily: "'Courier New', monospace",
                                 opacity: solved ? 0.7 : 1
                             },
                             children: cell
                         }, `${rowIdx}-${colIdx}`, false, {
                             fileName: "[project]/app/next-challenge/CipherCell.js",
-                            lineNumber: 27,
+                            lineNumber: 41,
                             columnNumber: 13
                         }, this)))
             }, void 0, false, {
                 fileName: "[project]/app/next-challenge/CipherCell.js",
-                lineNumber: 24,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             solved ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 style: {
                     color: "#ffd700",
-                    fontSize: "1.5rem"
+                    fontSize: "clamp(1rem, 4vw, 1.5rem)"
                 },
                 children: [
                     "Decoded: ",
@@ -85,12 +96,12 @@ const CipherCell = ({ cipher, index, onSolve })=>{
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/next-challenge/CipherCell.js",
-                lineNumber: 49,
+                lineNumber: 68,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                 onSubmit: handleSubmit,
                 style: {
-                    marginTop: "1rem"
+                    marginTop: "0.5rem"
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -99,24 +110,25 @@ const CipherCell = ({ cipher, index, onSolve })=>{
                         onChange: (e)=>setInput(e.target.value),
                         placeholder: "Enter the secret message",
                         style: {
-                            padding: "0.5rem",
-                            fontSize: "1rem",
+                            padding: "0.3rem",
+                            fontSize: "clamp(0.8rem, 3vw, 1rem)",
                             background: "#333",
                             color: "#e0e0e0",
                             border: "2px solid #ff4444",
                             borderRadius: "5px",
-                            marginRight: "0.5rem"
+                            marginRight: "0.3rem",
+                            width: "min(200px, 60%)"
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/next-challenge/CipherCell.js",
-                        lineNumber: 52,
+                        lineNumber: 73,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "submit",
                         style: {
-                            padding: "0.5rem 1rem",
-                            fontSize: "1rem",
+                            padding: "0.3rem 0.8rem",
+                            fontSize: "clamp(0.8rem, 3vw, 1rem)",
                             background: "#ff4444",
                             color: "#fff",
                             border: "none",
@@ -126,19 +138,19 @@ const CipherCell = ({ cipher, index, onSolve })=>{
                         children: "Decode"
                     }, void 0, false, {
                         fileName: "[project]/app/next-challenge/CipherCell.js",
-                        lineNumber: 59,
+                        lineNumber: 89,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/next-challenge/CipherCell.js",
-                lineNumber: 51,
+                lineNumber: 72,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/next-challenge/CipherCell.js",
-        lineNumber: 23,
+        lineNumber: 27,
         columnNumber: 5
     }, this);
 };
@@ -191,147 +203,136 @@ function CipherShadows() {
     const [totalScore, setTotalScore] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [missionsCompleted, setMissionsCompleted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [isClient, setIsClient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    // Define encodeWord to shift letters forward
-    const encodeWord = (word, shift)=>{
-        return word.split("").map((letter)=>{
-            const code = letter.charCodeAt(0);
-            if (code >= 65 && code <= 90) {
-                return String.fromCharCode((code - 65 + shift) % 26 + 65);
-            }
-            return letter; // Non-letters unchanged
-        });
-    };
     const initialCiphers = [
         {
             grid: [
                 [
-                    'Q',
-                    'D',
-                    'W',
-                    'L'
+                    "Q",
+                    "D",
+                    "W",
+                    "L"
                 ],
                 [
-                    'H',
-                    'A',
-                    'N',
-                    'S'
+                    "H",
+                    "A",
+                    "N",
+                    "S"
                 ],
                 [
-                    'P',
-                    'X',
-                    'U',
-                    'C'
+                    "P",
+                    "X",
+                    "U",
+                    "C"
                 ],
                 [
-                    'M',
-                    'U',
-                    'R',
-                    'Z'
+                    "M",
+                    "U",
+                    "R",
+                    "Z"
                 ],
                 [
-                    'J',
-                    'R',
-                    'O',
-                    'W'
+                    "J",
+                    "R",
+                    "O",
+                    "W"
                 ]
             ],
             clue: "Shift backward by the second prime.",
             solution: "NATI",
-            audio: "/sounds/cipher1.mp3",
             solved: true,
-            highlightedRow: 0 // First row shaded
+            highlightedRow: 0
         },
         {
             grid: [
                 [
-                    '8',
-                    'X',
-                    'Y',
-                    'Z'
+                    "8",
+                    "X",
+                    "Y",
+                    "Z"
                 ],
                 [
-                    'E',
-                    'X',
-                    'E',
-                    'X'
+                    "E",
+                    "X",
+                    "E",
+                    "X"
                 ],
                 [
-                    'K',
-                    'X',
-                    'Q',
-                    'P'
+                    "K",
+                    "X",
+                    "Q",
+                    "P"
                 ],
                 [
-                    '34',
-                    'N',
-                    'M',
-                    'L'
+                    "34",
+                    "N",
+                    "M",
+                    "L"
                 ]
             ],
             clue: "Shift each letter back by 3 to find the name.",
             solution: "BUBU",
             audio: "/sounds/cipher2.mp3",
             solved: false,
-            highlightedRow: 1 // Third row shaded
+            highlightedRow: 1
         },
         {
             grid: [
                 [
-                    'B',
-                    'C',
-                    'D',
-                    'F',
-                    'G',
-                    'O',
-                    'P',
-                    'Q'
+                    "B",
+                    "C",
+                    "D",
+                    "F",
+                    "G",
+                    "O",
+                    "P",
+                    "Q"
                 ],
                 [
-                    'C',
-                    'D',
-                    'F',
-                    'H',
-                    'I',
-                    'J',
-                    'K',
-                    'L'
+                    "C",
+                    "D",
+                    "F",
+                    "H",
+                    "I",
+                    "J",
+                    "K",
+                    "L"
                 ],
                 [
-                    'E',
-                    'W',
-                    'E',
-                    'D',
-                    'E',
-                    'G',
-                    'E',
-                    'Z'
+                    "E",
+                    "W",
+                    "E",
+                    "D",
+                    "E",
+                    "G",
+                    "E",
+                    "Z"
                 ],
                 [
-                    'M',
-                    'N',
-                    'O',
-                    'P',
-                    'Q',
-                    'C',
-                    'D',
-                    'F'
+                    "M",
+                    "N",
+                    "O",
+                    "P",
+                    "Q",
+                    "C",
+                    "D",
+                    "F"
                 ],
                 [
-                    'U',
-                    'V',
-                    'O',
-                    'P',
-                    'Q',
-                    'W',
-                    'X',
-                    'Y'
+                    "U",
+                    "V",
+                    "O",
+                    "P",
+                    "Q",
+                    "W",
+                    "X",
+                    "Y"
                 ]
             ],
             clue: "Direction lost in reverse.",
             solution: "ZEGEDEWE",
             audio: "/sounds/cipher3.mp3",
             solved: false,
-            highlightedRow: 2 // Fourth row shaded
+            highlightedRow: 2
         },
         {
             grid: [
@@ -376,7 +377,7 @@ function CipherShadows() {
                     17
                 ]
             ],
-            clue: "Subtract number 5 from each number and Reverse to reveal the date of the KIng. (100 means 👉🏻👉🏻 / ) and dont include commas",
+            clue: "Subtract number 5 from each number and Reverse to reveal the date of the King. (100 means 👉🏻👉🏻 / ) and dont include commas",
             solution: "16/08/1993",
             audio: "/sounds/cipher4.mp3",
             solved: false,
@@ -384,14 +385,12 @@ function CipherShadows() {
         }
     ];
     const [ciphers, setCiphers] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialCiphers);
-    // Load score and ciphers on mount
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         setIsClient(true);
         if ("TURBOPACK compile-time falsy", 0) {
             "TURBOPACK unreachable";
         }
     }, []);
-    // Save score and ciphers
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if ("TURBOPACK compile-time falsy", 0) {
             "TURBOPACK unreachable";
@@ -402,7 +401,7 @@ function CipherShadows() {
         isClient
     ]);
     const handleSolve = (index, userInput)=>{
-        console.log("[next-challenge] Handling solve - Index:", index, "Input:", userInput);
+        console.log("[CipherShadows] Handling solve - Index:", index, "Input:", userInput);
         if (userInput.trim().toUpperCase() === ciphers[index].solution.toUpperCase()) {
             setCiphers((prev)=>{
                 const newCiphers = [
@@ -412,21 +411,21 @@ function CipherShadows() {
                     newCiphers[index].solved = true;
                     setTotalScore((prevScore)=>{
                         const newScore = prevScore + 20;
-                        console.log("[next-challenge] New Total Score:", newScore);
-                        localStorage.setItem('totalScore', newScore);
+                        console.log("[CipherShadows] New Total Score:", newScore);
+                        localStorage.setItem("totalScore", newScore);
                         return newScore;
                     });
-                    const audio = new Audio(ciphers[index].audio);
-                    audio.play().catch(()=>{
-                        console.log("[next-challenge] Audio file missing or unsupported, skipping error display");
-                    });
+                    if (newCiphers[index].audio && index !== 0) {
+                        const audio = new Audio(newCiphers[index].audio);
+                        audio.play().then(()=>console.log(`[CipherShadows] Playing ${newCiphers[index].audio}`)).catch((err)=>console.log("[CipherShadows] Audio failed:", err.message));
+                    }
                 } else {
-                    console.log("[next-challenge] Cipher already solved, skipping");
+                    console.log("[CipherShadows] Cipher already solved, skipping");
                 }
                 return newCiphers;
             });
         } else {
-            console.log("[next-challenge] Incorrect solution");
+            console.log("[CipherShadows] Incorrect solution");
         }
     };
     if (!isClient) {
@@ -434,38 +433,38 @@ function CipherShadows() {
             children: "Loading..."
         }, void 0, false, {
             fileName: "[project]/app/next-challenge/page.js",
-            lineNumber: 138,
+            lineNumber: 129,
             columnNumber: 12
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
-            padding: "2rem",
+            padding: "1rem",
             textAlign: "center",
             background: "linear-gradient(135deg, #1a1a1a, #2c2c2c)",
             minHeight: "100vh",
             color: "#e0e0e0"
         },
-        className: "jsx-b5ac0f575eeac00c",
+        className: "jsx-af981a49b0f6996",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                 style: {
-                    fontSize: "4rem",
+                    fontSize: "clamp(2rem, 8vw, 4rem)",
                     color: "#ff4444",
                     fontFamily: "'Courier New', monospace",
                     textShadow: "0 0 10px #ff4444"
                 },
-                className: "jsx-b5ac0f575eeac00c",
+                className: "jsx-af981a49b0f6996",
                 children: "Cipher Shadows"
             }, void 0, false, {
                 fileName: "[project]/app/next-challenge/page.js",
-                lineNumber: 143,
+                lineNumber: 142,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     margin: "1rem 0",
-                    fontSize: "2rem",
+                    fontSize: "clamp(1.2rem, 5vw, 2rem)",
                     color: "#fff",
                     background: "rgba(255, 68, 68, 0.2)",
                     padding: "0.5rem 1rem",
@@ -474,28 +473,28 @@ function CipherShadows() {
                     display: "inline-block",
                     animation: "shine 2s infinite"
                 },
-                className: "jsx-b5ac0f575eeac00c",
+                className: "jsx-af981a49b0f6996",
                 children: [
                     "Total Score: ",
                     totalScore
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/next-challenge/page.js",
-                lineNumber: 144,
+                lineNumber: 152,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 style: {
-                    fontSize: "1.2rem",
+                    fontSize: "clamp(0.8rem, 3vw, 1.2rem)",
                     color: "#ff4444",
                     margin: "1rem 0",
                     fontFamily: "'Courier New', monospace"
                 },
-                className: "jsx-b5ac0f575eeac00c",
-                children: "Decode the cipher using the clue. Enter the secret message to proceed. shaded  are the once where the answers belong"
+                className: "jsx-af981a49b0f6996",
+                children: "Decode the cipher using the clue. Enter the secret message to proceed. Shaded rows contain the answers."
             }, void 0, false, {
                 fileName: "[project]/app/next-challenge/page.js",
-                lineNumber: 147,
+                lineNumber: 167,
                 columnNumber: 7
             }, this),
             missionsCompleted === 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -503,7 +502,7 @@ function CipherShadows() {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     style: {
                         padding: "0.5rem 1rem",
-                        fontSize: "1.2rem",
+                        fontSize: "clamp(0.9rem, 3vw, 1.2rem)",
                         background: "#ff4444",
                         color: "#fff",
                         border: "none",
@@ -512,40 +511,44 @@ function CipherShadows() {
                         marginBottom: "1rem",
                         boxShadow: "0 0 10px #ff4444"
                     },
-                    className: "jsx-b5ac0f575eeac00c",
+                    className: "jsx-af981a49b0f6996",
                     children: "Next Mission!"
                 }, void 0, false, {
                     fileName: "[project]/app/next-challenge/page.js",
-                    lineNumber: 150,
+                    lineNumber: 180,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/next-challenge/page.js",
-                lineNumber: 149,
+                lineNumber: 179,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                    gap: "1rem",
                     maxWidth: "1200px",
-                    margin: "2rem auto"
+                    margin: "2rem auto",
+                    padding: "0 0.5rem"
                 },
-                className: "jsx-b5ac0f575eeac00c",
+                className: "jsx-af981a49b0f6996",
                 children: ciphers.map((cipher, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            marginBottom: "2rem",
                             padding: "1rem",
                             background: "#222",
                             borderRadius: "10px",
                             boxShadow: "0 0 15px rgba(255, 68, 68, 0.3)"
                         },
-                        className: "jsx-b5ac0f575eeac00c",
+                        className: "jsx-af981a49b0f6996",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 style: {
                                     color: "#ff4444",
-                                    fontSize: "1.5rem"
+                                    fontSize: "clamp(1rem, 4vw, 1.5rem)",
+                                    marginBottom: "1rem"
                                 },
-                                className: "jsx-b5ac0f575eeac00c",
+                                className: "jsx-af981a49b0f6996",
                                 children: [
                                     "Mission ",
                                     index + 1,
@@ -554,7 +557,7 @@ function CipherShadows() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/next-challenge/page.js",
-                                lineNumber: 158,
+                                lineNumber: 217,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$next$2d$challenge$2f$CipherCell$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -563,28 +566,28 @@ function CipherShadows() {
                                 onSolve: handleSolve
                             }, void 0, false, {
                                 fileName: "[project]/app/next-challenge/page.js",
-                                lineNumber: 159,
+                                lineNumber: 226,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "[project]/app/next-challenge/page.js",
-                        lineNumber: 157,
+                        lineNumber: 208,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/next-challenge/page.js",
-                lineNumber: 155,
+                lineNumber: 197,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                id: "b5ac0f575eeac00c",
+                id: "af981a49b0f6996",
                 children: "@keyframes shine{0%{text-shadow:0 0 5px #f44,0 0 10px #f44,0 0 15px #fff}50%{text-shadow:0 0 10px #f44,0 0 20px #f44,0 0 30px #fff}to{text-shadow:0 0 5px #f44,0 0 10px #f44,0 0 15px #fff}}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/next-challenge/page.js",
-        lineNumber: 142,
+        lineNumber: 133,
         columnNumber: 5
     }, this);
 }

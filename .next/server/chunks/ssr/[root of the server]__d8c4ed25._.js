@@ -411,12 +411,30 @@ function Gallery() {
             flipped: false
         },
         {
-            name: "Lis is Simple",
+            name: "Life is Simple",
             photo: "/images/foto (23).jpg",
             question: "What has hands but can’t clap?",
             answer: "Clock",
             audio: "/sounds/rap4.mp3",
             index: 23,
+            flipped: false
+        },
+        {
+            name: "am a Killer",
+            photo: "/images/IMG_8456 (1).jpg",
+            question: "Who is Ababa's Grandfather Name?",
+            answer: "Geda",
+            audio: "/sounds/sixninesong.mp3",
+            index: 24,
+            flipped: false
+        },
+        {
+            name: "why u stare at me?",
+            photo: "/images/IMG_8508 (2).jpg",
+            question: "What has teeth but can’t bite?",
+            answer: "comb",
+            audio: "/sounds/diidycome.mp3",
+            index: 25,
             flipped: false
         }
     ];
@@ -542,7 +560,7 @@ function Gallery() {
                 children: "Family Gallery Challenge"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 354,
+                lineNumber: 369,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -564,7 +582,7 @@ function Gallery() {
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 365,
+                lineNumber: 380,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -580,7 +598,7 @@ function Gallery() {
                 children: "How to Play: Answer the trick question on each card’s back. Get it right to flip it, earn 10 points, and hear a unique message! Flip all cards to move on!"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 381,
+                lineNumber: 396,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -600,7 +618,7 @@ function Gallery() {
                 children: disco ? "Chill Out" : "Disco Party!"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 394,
+                lineNumber: 409,
                 columnNumber: 7
             }, this),
             allFlipped && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -621,12 +639,12 @@ function Gallery() {
                     children: "Next Challenge!"
                 }, void 0, false, {
                     fileName: "[project]/app/gallery/page.js",
-                    lineNumber: 413,
+                    lineNumber: 428,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 412,
+                lineNumber: 427,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -644,18 +662,18 @@ function Gallery() {
                         onAnswer: handleAnswer
                     }, member.index, false, {
                         fileName: "[project]/app/gallery/page.js",
-                        lineNumber: 443,
+                        lineNumber: 458,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 431,
+                lineNumber: 446,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/gallery/page.js",
-        lineNumber: 341,
+        lineNumber: 356,
         columnNumber: 5
     }, this);
 }

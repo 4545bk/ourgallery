@@ -220,18 +220,33 @@ export default function Gallery() {
         flipped: false
       },
       {
-        name: "Lis is Simple",
+        name: "Life is Simple",
         photo: "/images/foto (23).jpg",
         question: "What has hands but can’t clap?",
         answer: "Clock",
         audio: "/sounds/rap4.mp3",
         index: 23,
         flipped: false
-      }
-    
-    
-    
-    
+      },
+      {
+        name: "am a Killer",
+        photo: "/images/IMG_8456 (1).jpg",
+        question: "Who is Ababa's Grandfather Name?",
+        answer: "Geda",
+        audio: "/sounds/sixninesong.mp3",
+        index: 24,
+        flipped: false
+      },
+      {
+        name: "why u stare at me?",
+        photo: "/images/IMG_8508 (2).jpg",
+        question: "What has teeth but can’t bite?",
+        answer: "comb",
+        audio: "/sounds/diidycome.mp3",
+        index: 25,
+        flipped: false
+      },
+      
   ];
 
   const [cards, setCards] = useState(initialFamilyMembers);
