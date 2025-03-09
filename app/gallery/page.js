@@ -175,11 +175,11 @@ export default function Gallery() {
         flipped: false
       },
       {
-        name: "Dope",
+        name: "Son of Mary ❤️",
         photo: "/images/foto (18).jpg",
-        question: "What has four legs but can't walk?",
-        answer: "Table",
-        audio: "/sounds/rap3.mp3",
+        question: "Who is our God?",
+        answer: "Jesus",
+        audio: "/sounds/yarejal.mp3",
         index: 18,
         flipped: false
       },
