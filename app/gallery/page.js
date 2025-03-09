@@ -59,7 +59,7 @@ export default function Gallery() {
     {
       name: "Ever since i was a kid😢",
       photo: "/images/foto (5).jpg",
-      question: "What do you call someone who is famous for great achievements and remembered for generations?starts with L",
+      question: "What do you call someone who is famous for great achievements and remembered for generations?starts L",
       answer: "Legend",
       audio: "/sounds/eversince.mp3",
       index: 5,
@@ -337,13 +337,14 @@ export default function Gallery() {
       console.log("Wrong answer, no flip or sound");
     }
   };
-
   return (
     <div
       style={{
-        padding: "2rem",
+        padding: "1rem",
         textAlign: "center",
-        background: disco ? "linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff)" : "linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1)",
+        background: disco
+          ? "linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff)"
+          : "linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1)",
         minHeight: "100vh",
         overflow: "hidden",
         transition: "background 0.5s ease",
@@ -352,7 +353,7 @@ export default function Gallery() {
     >
       <h1
         style={{
-          fontSize: "4rem",
+          fontSize: "clamp(2rem, 8vw, 4rem)",
           color: "#fff",
           fontFamily: "'Comic Sans MS', cursive",
           textShadow: "3px 3px 6px #333",
@@ -364,7 +365,7 @@ export default function Gallery() {
       <div
         style={{
           margin: "1rem 0",
-          fontSize: "2rem",
+          fontSize: "clamp(1.2rem, 5vw, 2rem)",
           color: "#fff",
           fontFamily: "'Comic Sans MS', cursive",
           background: "rgba(255, 215, 0, 0.2)",
@@ -379,7 +380,7 @@ export default function Gallery() {
       </div>
       <p
         style={{
-          fontSize: "1.2rem",
+          fontSize: "clamp(0.8rem, 3vw, 1.2rem)",
           color: "#ffd700",
           margin: "1rem 0",
           fontFamily: "'Comic Sans MS', cursive",
@@ -394,7 +395,7 @@ export default function Gallery() {
         onClick={() => setDisco(!disco)}
         style={{
           padding: "0.5rem 1rem",
-          fontSize: "1.2rem",
+          fontSize: "clamp(0.9rem, 3vw, 1.2rem)",
           fontFamily: "'Comic Sans MS', cursive",
           background: "#ff5722",
           color: "#fff",
@@ -412,7 +413,7 @@ export default function Gallery() {
           <button
             style={{
               padding: "0.5rem 1rem",
-              fontSize: "1.2rem",
+              fontSize: "clamp(0.9rem, 3vw, 1.2rem)",
               fontFamily: "'Comic Sans MS', cursive",
               background: "#4ecdc4",
               color: "#fff",
@@ -427,7 +428,17 @@ export default function Gallery() {
           </button>
         </Link>
       )}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem", maxWidth: "1200px", margin: "2rem auto" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(150px, 250px))", // Adjusted minmax for better control
+          gap: "1rem",
+          padding: "0 1rem",
+          maxWidth: "1400px", // Caps container width on large screens
+          margin: "2rem auto", // Centers the grid
+          justifyContent: "center", // Ensures cards are centered within the grid
+        }}
+      >
         {cards.map((member) => (
           <MemoryCard key={member.index} member={member} onAnswer={handleAnswer} />
         ))}

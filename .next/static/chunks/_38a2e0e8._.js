@@ -15,14 +15,11 @@ __turbopack_context__.v({
   "flip": "MemoryCard-module__H8OZ3G__flip",
   "flipped": "MemoryCard-module__H8OZ3G__flipped",
   "name": "MemoryCard-module__H8OZ3G__name",
-  "nextCard": "MemoryCard-module__H8OZ3G__nextCard",
   "photo": "MemoryCard-module__H8OZ3G__photo",
   "questionForm": "MemoryCard-module__H8OZ3G__questionForm",
   "shake": "MemoryCard-module__H8OZ3G__shake",
   "spin": "MemoryCard-module__H8OZ3G__spin",
   "submitButton": "MemoryCard-module__H8OZ3G__submitButton",
-  "victory": "MemoryCard-module__H8OZ3G__victory",
-  "victoryDance": "MemoryCard-module__H8OZ3G__victoryDance",
 });
 }}),
 "[project]/app/gallery/MemoryCard.js [app-client] (ecmascript)": ((__turbopack_context__) => {
@@ -235,7 +232,7 @@ function Gallery() {
         {
             name: "Ever since i was a kid😢",
             photo: "/images/foto (5).jpg",
-            question: "What do you call someone who is famous for great achievements and remembered for generations?starts with L",
+            question: "What do you call someone who is famous for great achievements and remembered for generations?starts L",
             answer: "Legend",
             audio: "/sounds/eversince.mp3",
             index: 5,
@@ -350,11 +347,11 @@ function Gallery() {
             flipped: false
         },
         {
-            name: "Dope",
+            name: "Son of Mary ❤️",
             photo: "/images/foto (18).jpg",
-            question: "What has four legs but can't walk?",
-            answer: "Table",
-            audio: "/sounds/rap3.mp3",
+            question: "Who is our God?",
+            answer: "Jesus",
+            audio: "/sounds/yarejal.mp3",
             index: 18,
             flipped: false
         },
@@ -545,7 +542,7 @@ function Gallery() {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
-            padding: "2rem",
+            padding: "1rem",
             textAlign: "center",
             background: disco ? "linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff)" : "linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1)",
             minHeight: "100vh",
@@ -556,7 +553,7 @@ function Gallery() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                 style: {
-                    fontSize: "4rem",
+                    fontSize: "clamp(2rem, 8vw, 4rem)",
                     color: "#fff",
                     fontFamily: "'Comic Sans MS', cursive",
                     textShadow: "3px 3px 6px #333",
@@ -565,13 +562,13 @@ function Gallery() {
                 children: "Family Gallery Challenge"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 353,
+                lineNumber: 354,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     margin: "1rem 0",
-                    fontSize: "2rem",
+                    fontSize: "clamp(1.2rem, 5vw, 2rem)",
                     color: "#fff",
                     fontFamily: "'Comic Sans MS', cursive",
                     background: "rgba(255, 215, 0, 0.2)",
@@ -587,12 +584,12 @@ function Gallery() {
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 364,
+                lineNumber: 365,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 style: {
-                    fontSize: "1.2rem",
+                    fontSize: "clamp(0.8rem, 3vw, 1.2rem)",
                     color: "#ffd700",
                     margin: "1rem 0",
                     fontFamily: "'Comic Sans MS', cursive",
@@ -603,14 +600,14 @@ function Gallery() {
                 children: "How to Play: Answer the trick question on each card’s back. Get it right to flip it, earn 10 points, and hear a unique message! Flip all cards to move on!"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 380,
+                lineNumber: 381,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: ()=>setDisco(!disco),
                 style: {
                     padding: "0.5rem 1rem",
-                    fontSize: "1.2rem",
+                    fontSize: "clamp(0.9rem, 3vw, 1.2rem)",
                     fontFamily: "'Comic Sans MS', cursive",
                     background: "#ff5722",
                     color: "#fff",
@@ -623,7 +620,7 @@ function Gallery() {
                 children: disco ? "Chill Out" : "Disco Party!"
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 393,
+                lineNumber: 394,
                 columnNumber: 7
             }, this),
             allFlipped && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -631,7 +628,7 @@ function Gallery() {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     style: {
                         padding: "0.5rem 1rem",
-                        fontSize: "1.2rem",
+                        fontSize: "clamp(0.9rem, 3vw, 1.2rem)",
                         fontFamily: "'Comic Sans MS', cursive",
                         background: "#4ecdc4",
                         color: "#fff",
@@ -644,39 +641,41 @@ function Gallery() {
                     children: "Next Challenge!"
                 }, void 0, false, {
                     fileName: "[project]/app/gallery/page.js",
-                    lineNumber: 412,
+                    lineNumber: 413,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 411,
+                lineNumber: 412,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     display: "grid",
-                    gridTemplateColumns: "repeat(3, 1fr)",
-                    gap: "2rem",
-                    maxWidth: "1200px",
-                    margin: "2rem auto"
+                    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 250px))",
+                    gap: "1rem",
+                    padding: "0 1rem",
+                    maxWidth: "1400px",
+                    margin: "2rem auto",
+                    justifyContent: "center"
                 },
                 children: cards.map((member)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$gallery$2f$MemoryCard$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         member: member,
                         onAnswer: handleAnswer
                     }, member.index, false, {
                         fileName: "[project]/app/gallery/page.js",
-                        lineNumber: 432,
+                        lineNumber: 443,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/app/gallery/page.js",
-                lineNumber: 430,
+                lineNumber: 431,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/gallery/page.js",
-        lineNumber: 342,
+        lineNumber: 341,
         columnNumber: 5
     }, this);
 }
