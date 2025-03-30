@@ -1,1 +1,15 @@
-{}
+{
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/events/route": "app/api/events/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/telegram/route": "app/api/telegram/route.js",
+  "/posts/page": "app/posts/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/posts/route": "app/api/posts/route.js",
+  "/api/profile/route": "app/api/profile/route.js",
+  "/api/friends/route": "app/api/friends/route.js",
+  "/api/users/route": "app/api/users/route.js",
+  "/api/signup/route": "app/api/signup/route.js",
+  "/api/posts/[id]/comment/route": "app/api/posts/[id]/comment/route.js"
+}

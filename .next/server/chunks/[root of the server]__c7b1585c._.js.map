@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 52, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Biruh/our-gallery/app/api/events/route.js"],"sourcesContent":["import dbConnect, { Event } from '../../../lib/mongodb';\r\n\r\nexport async function GET() {\r\n  await dbConnect();\r\n  const events = await Event.find({});\r\n  return new Response(JSON.stringify(events), { status: 200 });\r\n}\r\n\r\nexport async function POST(request) {\r\n  await dbConnect();\r\n  const body = await request.json();\r\n  const event = new Event(body);\r\n  await event.save();\r\n  return new Response(JSON.stringify(event), { status: 201 });\r\n}"],"names":[],"mappings":";;;;;;;;;;AAEO,eAAe;IACpB,MAAM;IACN,MAAM,SAAS,MAAM,MAAM,IAAI,CAAC,CAAC;IACjC,OAAO,IAAI,SAAS,KAAK,SAAS,CAAC,SAAS;QAAE,QAAQ;IAAI;AAC5D;AAEO,eAAe,KAAK,OAAO;IAChC,MAAM;IACN,MAAM,OAAO,MAAM,QAAQ,IAAI;IAC/B,MAAM,QAAQ,IAAI,MAAM;IACxB,MAAM,MAAM,IAAI;IAChB,OAAO,IAAI,SAAS,KAAK,SAAS,CAAC,QAAQ;QAAE,QAAQ;IAAI;AAC3D","debugId":null}},
+    {"offset": {"line": 78, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

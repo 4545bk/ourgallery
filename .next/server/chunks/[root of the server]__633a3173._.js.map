@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 108, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Biruh/our-gallery/app/api/pusher/send/route.js"],"sourcesContent":["import { getSession } from \"next-auth/react\";\r\nimport Pusher from \"pusher\";\r\n\r\nconst pusher = new Pusher({\r\n  appId: \"1966596\",\r\n  key: \"a9e989dcc04e514c8a20\",\r\n  secret: \"0d17e8600208ac84e237\",\r\n  cluster: \"ap2\",\r\n  useTLS: true,\r\n});\r\n\r\nexport async function POST(req) {\r\n  const session = await getSession({ req });\r\n  if (!session) {\r\n    return new Response(\"Unauthorized\", { status: 401 });\r\n  }\r\n\r\n  const { channel, event, data } = await req.json();\r\n  await pusher.trigger(channel, event, data);\r\n  return new Response(\"Message sent\", { status: 200 });\r\n}"],"names":[],"mappings":";;;AAAA;AACA;;;AAEA,MAAM,SAAS,IAAI,yIAAA,CAAA,UAAM,CAAC;IACxB,OAAO;IACP,KAAK;IACL,QAAQ;IACR,SAAS;IACT,QAAQ;AACV;AAEO,eAAe,KAAK,GAAG;IAC5B,MAAM,UAAU,MAAM,CAAA,GAAA,gJAAA,CAAA,aAAU,AAAD,EAAE;QAAE;IAAI;IACvC,IAAI,CAAC,SAAS;QACZ,OAAO,IAAI,SAAS,gBAAgB;YAAE,QAAQ;QAAI;IACpD;IAEA,MAAM,EAAE,OAAO,EAAE,KAAK,EAAE,IAAI,EAAE,GAAG,MAAM,IAAI,IAAI;IAC/C,MAAM,OAAO,OAAO,CAAC,SAAS,OAAO;IACrC,OAAO,IAAI,SAAS,gBAAgB;QAAE,QAAQ;IAAI;AACpD","debugId":null}},
+    {"offset": {"line": 137, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

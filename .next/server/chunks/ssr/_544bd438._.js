@@ -17,127 +17,15 @@ var { g: global, d: __dirname } = __turbopack_context__;
 {
 __turbopack_context__.n(__turbopack_context__.i("[project]/app/layout.js [app-rsc] (ecmascript)"));
 }}),
-"[project]/app/page.js [app-rsc] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
+"[project]/app/page.js [app-rsc] (ecmascript)": (function(__turbopack_context__) {
 
-var { g: global, d: __dirname } = __turbopack_context__;
+var { g: global, d: __dirname, m: module, e: exports } = __turbopack_context__;
 {
-__turbopack_context__.s({
-    "default": (()=>Home)
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react.js [app-rsc] (ecmascript)");
-;
-;
-function Home() {
-    const canvasRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["useRef"])(null);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const canvas = canvasRef.current;
-        const ctx = canvas.getContext("2d");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        const binaryChars = "010101010101".split("");
-        const fontSize = 16;
-        const columns = Math.floor(canvas.width / fontSize);
-        const drops = Array(columns).fill(1);
-        function draw() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "#00ff00";
-            ctx.font = `${fontSize}px monospace`;
-            for(let i = 0; i < drops.length; i++){
-                const text = binaryChars[Math.floor(Math.random() * binaryChars.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-        const interval = setInterval(draw, 50);
-        return ()=>clearInterval(interval);
-    }, []);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        style: {
-            position: "relative",
-            overflow: "hidden",
-            height: "100vh",
-            background: "black"
-        },
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("canvas", {
-                ref: canvasRef,
-                style: {
-                    position: "absolute",
-                    top: 0,
-                    left: 0
-                }
-            }, void 0, false, {
-                fileName: "[project]/app/page.js",
-                lineNumber: 42,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                style: {
-                    position: "relative",
-                    zIndex: 2,
-                    textAlign: "center",
-                    paddingTop: "20vh"
-                },
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        style: {
-                            fontSize: "3rem",
-                            fontFamily: "'Comic Sans MS', cursive",
-                            color: "#ff5722"
-                        },
-                        children: "Welcome to Cousin Chronicles"
-                    }, void 0, false, {
-                        fileName: "[project]/app/page.js",
-                        lineNumber: 44,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        style: {
-                            fontSize: "1.5rem"
-                        },
-                        children: [
-                            "Visit",
-                            ' ',
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "/gallery",
-                                style: {
-                                    color: "#4ecdc4",
-                                    textDecoration: "underline"
-                                },
-                                children: "the gallery"
-                            }, void 0, false, {
-                                fileName: "[project]/app/page.js",
-                                lineNumber: 49,
-                                columnNumber: 11
-                            }, this),
-                            ' ',
-                            " to see the fun!"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/app/page.js",
-                        lineNumber: 47,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/app/page.js",
-                lineNumber: 43,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/app/page.js",
-        lineNumber: 41,
-        columnNumber: 5
-    }, this);
-}
-}}),
+const e = new Error(`Could not parse module '[project]/app/page.js'
+
+Identifier cannot follow number`);
+e.code = 'MODULE_UNPARSEABLE';
+throw e;}}),
 "[project]/app/page.js [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
 
 var { g: global, d: __dirname } = __turbopack_context__;

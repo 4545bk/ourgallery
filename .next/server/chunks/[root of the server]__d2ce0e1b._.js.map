@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Biruh/our-gallery/app/api/posts/%5Bid%5D/like/route.js"],"sourcesContent":["import { NextResponse } from \"next/server\";\r\nimport dbConnect, { Post } from \"../../../../lib/mongodb\"; // 4 levels up from here\r\n\r\nexport async function POST(request, { params }) {\r\n  await dbConnect();\r\n  const { id } = params;\r\n  const post = await Post.findByIdAndUpdate(\r\n    id,\r\n    { $inc: { likes: 1 } },\r\n    { new: true }\r\n  );\r\n  if (!post) return NextResponse.json({ error: \"Post not found\" }, { status: 404 });\r\n  return NextResponse.json(post);\r\n}"],"names":[],"mappings":";;;AAAA;;;;;;;;AAGO,eAAe,KAAK,OAAO,EAAE,EAAE,MAAM,EAAE;IAC5C,MAAM;IACN,MAAM,EAAE,EAAE,EAAE,GAAG;IACf,MAAM,OAAO,MAAM,KAAK,iBAAiB,CACvC,IACA;QAAE,MAAM;YAAE,OAAO;QAAE;IAAE,GACrB;QAAE,KAAK;IAAK;IAEd,IAAI,CAAC,MAAM,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;QAAE,OAAO;IAAiB,GAAG;QAAE,QAAQ;IAAI;IAC/E,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;AAC3B","debugId":null}},
+    {"offset": {"line": 88, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

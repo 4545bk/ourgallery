@@ -43,25 +43,45 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_92243eee$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[next]/internal/font/google/inter_92243eee.js [app-rsc] (ecmascript)");
 ;
 ;
-;
 const metadata = {
     title: "Cousin Chronicles",
-    description: "A wild family memory game!"
+    description: "A futuristic family connection hub"
 };
 function RootLayout({ children }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
         lang: "en",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
-            className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_92243eee$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].className,
-            children: children
-        }, void 0, false, {
-            fileName: "[project]/app/layout.js",
-            lineNumber: 14,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("head", {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                    href: "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;600&display=swap",
+                    rel: "stylesheet"
+                }, void 0, false, {
+                    fileName: "[project]/app/layout.js",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/app/layout.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
+                style: {
+                    margin: 0,
+                    background: "radial-gradient(circle at center, #0a0e1a 0%, #000000 100%)",
+                    overflowX: "hidden"
+                },
+                className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_92243eee$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].className,
+                children: children
+            }, void 0, false, {
+                fileName: "[project]/app/layout.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "[project]/app/layout.js",
-        lineNumber: 13,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }

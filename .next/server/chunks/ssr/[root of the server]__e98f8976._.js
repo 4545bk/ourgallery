@@ -38,551 +38,1984 @@ module.exports = mod;
 var { g: global, d: __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
-    "default": (()=>CosmicVoiceCommand)
+    "default": (()=>Home)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/styled-jsx/style.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fullcalendar$2f$react$2f$dist$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fullcalendar/react/dist/index.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fullcalendar$2f$daygrid$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fullcalendar/daygrid/index.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fullcalendar$2f$interaction$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fullcalendar/interaction/index.js [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
 ;
 ;
-function CosmicVoiceCommand() {
-    const [totalScore, setTotalScore] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [missionsComplete, setMissionsComplete] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [isClient, setIsClient] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [zorblaxMessage, setZorblaxMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("Oi, space cadet! I’m Zorblax. Use your voice or cam to command—don’t mess it up!");
-    const [currentMission, setCurrentMission] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [recording, setRecording] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [gestureMode, setGestureMode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [timeLeft, setTimeLeft] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(15);
-    const mediaRecorderRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const videoRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const streamRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const timerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const handTrackRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const missions = [
-        {
-            scenario: "Your ship’s stuck in a wormhole. Command it to escape!",
-            voiceCommand: "activate warp drive",
-            gesture: "salute",
-            zorblaxCorrect: "Warp drive on! We’re out, you stellar screamer!",
-            zorblaxIncorrect: "What was that? Salute like you mean it, loudmouth!"
-        },
-        {
-            scenario: "An alien ambassador is freaking out. Calm it down!",
-            voiceCommand: "peace and quiet",
-            gesture: "wave",
-            zorblaxCorrect: "Nice one! Alien’s chill now—your wave’s not half bad!",
-            zorblaxIncorrect: "Wave, you dunce, not flail! Try again."
-        },
-        {
-            scenario: "A star’s about to supernova. Summon a containment field!",
-            voiceCommand: "deploy containment",
-            gesture: "raise both hands",
-            zorblaxCorrect: "Field up! Star’s safe—you’re a cosmic champ!",
-            zorblaxIncorrect: "Both hands up, not one! Do it right, space-brain."
-        },
-        {
-            scenario: "The galaxy’s comms are down. Broadcast a signal!",
-            voiceCommand: "send galactic ping",
-            gesture: "point forward",
-            zorblaxCorrect: "Ping sent! Galaxy’s back online—nice point!",
-            zorblaxIncorrect: "Point forward, you oaf! Not whatever that was."
-        },
-        {
-            scenario: "A meteor storm’s incoming. Order a shield boost!",
-            voiceCommand: "boost shields now",
-            gesture: "cross arms",
-            zorblaxCorrect: "Shields boosted! You’re a star, space-talker!",
-            zorblaxIncorrect: "Cross your arms, not flop ‘em! Try again."
-        }
-    ];
+;
+;
+;
+;
+function Home() {
+    const [events, setEvents] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [roomName, setRoomName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [isCallStarted, setIsCallStarted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [jitsiLoaded, setJitsiLoaded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [theme, setTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("dark");
+    const [currentTime, setCurrentTime] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [notification, setNotification] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [progress, setProgress] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [chatOpen, setChatOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [chatMessages, setChatMessages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [chatInput, setChatInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    // Load Jitsi script
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        setIsClient(true);
-        if ("TURBOPACK compile-time falsy", 0) {
-            "TURBOPACK unreachable";
+        if (!window.JitsiMeetExternalAPI) {
+            const script = document.createElement("script");
+            script.src = "https://meet.jit.si/external_api.js";
+            script.async = true;
+            script.onload = ()=>{
+                setJitsiLoaded(true);
+                setProgress(100);
+            };
+            script.onerror = ()=>{
+                setError("Failed to load Jitsi script");
+                setProgress(0);
+            };
+            document.body.appendChild(script);
+            let progressInterval = setInterval(()=>{
+                setProgress((prev)=>prev < 90 ? prev + 10 : prev);
+            }, 200);
+            return ()=>{
+                clearInterval(progressInterval);
+                document.body.removeChild(script);
+            };
+        } else {
+            setJitsiLoaded(true);
+            setProgress(100);
         }
     }, []);
+    // Fetch events
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if ("TURBOPACK compile-time falsy", 0) {
-            "TURBOPACK unreachable";
+        fetch("/api/events").then((res)=>{
+            if (!res.ok) throw new Error("Failed to fetch events");
+            return res.json();
+        }).then((data)=>{
+            console.log("Fetched events:", data);
+            setEvents(data);
+        }).catch((err)=>setError(err.message));
+    }, []);
+    // Start Jitsi call
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (isCallStarted && roomName && jitsiLoaded && window.JitsiMeetExternalAPI) {
+            const domain = "meet.jit.si";
+            const options = {
+                roomName: roomName,
+                parentNode: document.querySelector("#meet"),
+                width: "100%",
+                height: 500
+            };
+            const api = new window.JitsiMeetExternalAPI(domain, options);
+            setNotification(`Meeting "${roomName}" activated!`);
+            setTimeout(()=>setNotification(""), 5000);
+            return ()=>api.dispose();
         }
     }, [
-        totalScore,
-        currentMission,
-        isClient
+        isCallStarted,
+        roomName,
+        jitsiLoaded
     ]);
-    const startRecording = async ()=>{
-        if (!gestureMode) {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    audio: true
-                });
-                mediaRecorderRef.current = new MediaRecorder(stream);
-                const chunks = [];
-                mediaRecorderRef.current.ondataavailable = (e)=>chunks.push(e.data);
-                mediaRecorderRef.current.onstop = ()=>{
-                    const blob = new Blob(chunks, {
-                        type: "audio/webm"
-                    });
-                    recognizeVoice(blob);
-                    stream.getTracks().forEach((track)=>track.stop());
-                };
-                mediaRecorderRef.current.start();
-                setRecording(true);
-                startTimer();
-            } catch (err) {
-                setZorblaxMessage("Mic access denied, you silent fool! Try gestures instead.");
-            }
-        } else {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    video: true
-                });
-                streamRef.current = stream;
-                videoRef.current.srcObject = stream;
-                videoRef.current.play();
-                setRecording(true);
-                startTimer();
-                startGestureDetection();
-            } catch (err) {
-                setZorblaxMessage("Cam access denied, you invisible twit! Use your voice.");
-            }
-        }
-    };
-    const stopRecording = ()=>{
-        if (!gestureMode && mediaRecorderRef.current) {
-            mediaRecorderRef.current.stop();
-        } else if (gestureMode && streamRef.current) {
-            streamRef.current.getTracks().forEach((track)=>track.stop());
-            stopGestureDetection();
-        }
-        setRecording(false);
-        clearTimeout(timerRef.current);
-    };
-    const startTimer = ()=>{
-        setTimeLeft(15);
-        timerRef.current = setInterval(()=>{
-            setTimeLeft((prev)=>{
-                if (prev <= 1) {
-                    stopRecording();
-                    setZorblaxMessage("Time’s up, slowpoke! Try again—15 seconds max!");
-                    return 0;
-                }
-                return prev - 1;
-            });
-        }, 1000);
-    };
-    const recognizeVoice = (blob)=>{
-        const command = missions[currentMission].voiceCommand.toLowerCase();
-        const reader = new FileReader();
-        reader.onload = ()=>{
-            const text = "mock voice data"; // Placeholder
-            if (text.includes(command.split(" ")[0]) || text.includes(command.split(" ")[1])) {
-                completeMission();
-            } else {
-                setZorblaxMessage(missions[currentMission].zorblaxIncorrect);
-            }
-        };
-        reader.readAsDataURL(blob);
-    };
-    const startGestureDetection = ()=>{
-        if (!handTrackRef.current) {
-            setZorblaxMessage("Gesture system not ready—wait a sec or use voice!");
-            return;
-        }
-        handTrackRef.current.startVideo(videoRef.current).then((status)=>{
-            if (status) {
-                console.log("[next-mystery] Video started for gesture detection");
-                detectGesture();
-            } else {
-                setZorblaxMessage("Video failed to start—check your cam, space cadet!");
-            }
-        });
-    };
-    const stopGestureDetection = ()=>{
-        if (handTrackRef.current) {
-            handTrackRef.current.stop();
-        }
-    };
-    const detectGesture = ()=>{
-        const modelParams = {
-            flipHorizontal: true,
-            maxNumBoxes: 2,
-            iouThreshold: 0.5,
-            scoreThreshold: 0.6
-        };
-        handTrackRef.current.load(modelParams).then((model)=>{
-            const detectInterval = setInterval(()=>{
-                model.detect(videoRef.current).then((predictions)=>{
-                    if (recording) {
-                        const gesture = missions[currentMission].gesture.toLowerCase();
-                        let matched = false;
-                        if (predictions.length > 0) {
-                            const hands = predictions.filter((p)=>p.label === "open" || p.label === "closed");
-                            if (gesture === "salute" && hands.length === 1 && hands[0].bbox[1] < 150) {
-                                matched = true; // Hand near top (face level)
-                            } else if (gesture === "wave" && hands.length === 1) {
-                                matched = true; // Single open hand
-                            } else if (gesture === "raise both hands" && hands.length === 2) {
-                                matched = true; // Two hands detected
-                            } else if (gesture === "point forward" && hands.length === 1 && hands[0].bbox[2] > 100) {
-                                matched = true; // Wide hand (extended)
-                            } else if (gesture === "cross arms" && hands.length === 0) {
-                                matched = true; // No hands visible (arms crossed assumption)
-                            }
+    // Initialize particles.js
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (window.particlesJS) {
+            window.particlesJS("particles-js", {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
                         }
-                        if (matched) {
-                            clearInterval(detectInterval);
-                            stopRecording();
-                            completeMission();
+                    },
+                    color: {
+                        value: theme === "dark" ? "#00dbff" : "#ffcc00"
+                    },
+                    shape: {
+                        type: "circle"
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: true
+                    },
+                    size: {
+                        value: 3,
+                        random: true
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: theme === "dark" ? "#00dbff" : "#ffcc00",
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "repulse"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        repulse: {
+                            distance: 100,
+                            duration: 0.4
+                        },
+                        push: {
+                            particles_nb: 4
                         }
                     }
+                },
+                retina_detect: true
+            });
+        }
+    }, [
+        theme
+    ]);
+    // Scroll-based fade-in for sections
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+        sections.forEach((section)=>{
+            section.style.opacity = "0";
+            section.style.transform = "translateY(50px)";
+            section.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+            observer.observe(section);
+        });
+        return ()=>sections.forEach((section)=>observer.unobserve(section));
+    }, []);
+    // Set initial time and check events
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const updateTimeAndEvents = async ()=>{
+            const now = new Date();
+            const eatOffset = 3 * 60 * 60 * 1000;
+            const nowEAT = new Date(now.getTime() + eatOffset);
+            setCurrentTime(nowEAT.toLocaleTimeString("en-US", {
+                timeZone: "UTC",
+                hour12: true
+            }));
+            console.log("Checking events at:", nowEAT.toISOString());
+            events.forEach(async (event)=>{
+                console.log("Raw event data:", event);
+                const dateTimeString = `${event.date}T${event.time || "00:00"}`;
+                let eventDateTime;
+                try {
+                    eventDateTime = new Date(dateTimeString);
+                    if (isNaN(eventDateTime.getTime())) throw new Error("Invalid date/time");
+                    const eventDateTimeEAT = new Date(eventDateTime.getTime() + eatOffset);
+                    console.log("Event:", event.title, "Scheduled:", eventDateTimeEAT.toISOString(), "Raw time:", event.time);
+                    if (nowEAT.getFullYear() === eventDateTimeEAT.getFullYear() && nowEAT.getMonth() === eventDateTimeEAT.getMonth() && nowEAT.getDate() === eventDateTimeEAT.getDate() && nowEAT.getHours() === eventDateTimeEAT.getHours() && nowEAT.getMinutes() === eventDateTimeEAT.getMinutes()) {
+                        console.log("Match found for:", event.title);
+                        try {
+                            const res = await fetch("/api/telegram", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({
+                                    message: `Hello Ayano family 👋 this is an automated message to let u know the  Event"${event.title}" is starting now!`
+                                })
+                            });
+                            if (!res.ok) throw new Error("Telegram API call failed");
+                            setNotification(`Event "${event.title}" started - Telegram notified!`);
+                            setTimeout(()=>setNotification(""), 5000);
+                        } catch (err) {
+                            setError("Failed to send Telegram notification: " + err.message);
+                            console.error(err);
+                        }
+                    }
+                } catch (err) {
+                    console.error("Invalid event date/time:", event, "Error:", err.message);
+                    setError(`Invalid date/time for event "${event.title || "unknown"}"`);
+                }
+            });
+        };
+        updateTimeAndEvents();
+        const interval = setInterval(updateTimeAndEvents, 10000);
+        return ()=>clearInterval(interval);
+    }, [
+        events
+    ]);
+    const handleDateClick = async (arg)=>{
+        const title = prompt("Enter event name:");
+        if (title) {
+            const timeInput = prompt("Enter time in EAT (e.g., 3:02 or 3:02 PM):") || "00:00";
+            let time;
+            let hours, minutes;
+            if (/^\d{1,2}:\d{2}\s?(AM|PM)?$/i.test(timeInput)) {
+                const [timePart, period = "PM"] = timeInput.split(/\s+/);
+                [hours, minutes] = timePart.split(":");
+                hours = parseInt(hours);
+                if (period.toUpperCase() === "PM" && hours !== 12) hours += 12;
+                if (period.toUpperCase() === "AM" && hours === 12) hours = 0;
+                time = `${hours.toString().padStart(2, "0")}:${minutes}`;
+            } else {
+                alert("Invalid time format! Use H:MM (e.g., 3:02) or H:MM AM/PM (e.g., 3:02 PM)");
+                return;
+            }
+            const newEvent = {
+                title,
+                date: arg.dateStr,
+                time,
+                votes: []
+            };
+            try {
+                const res = await fetch("/api/events", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(newEvent)
                 });
-            }, 500); // Check every 500ms
-            timerRef.current.detectInterval = detectInterval; // Store to clear later
-        });
+                if (!res.ok) throw new Error("Failed to create event");
+                const savedEvent = await res.json();
+                setEvents([
+                    ...events,
+                    savedEvent
+                ]);
+                const displayTime = `${parseInt(time.split(":")[0]) % 12 || 12}:${time.split(":")[1]} ${parseInt(time.split(":")[0]) >= 12 ? "PM" : "AM"}`;
+                setNotification(`Event "${title}" scheduled for ${arg.dateStr} ${displayTime} EAT!`);
+                setTimeout(()=>setNotification(""), 5000);
+            } catch (err) {
+                setError(err.message);
+            }
+        }
     };
-    const completeMission = ()=>{
-        setTotalScore((prev)=>{
-            const newScore = prev + 20;
-            localStorage.setItem('totalScore', newScore);
-            return newScore;
-        });
-        setZorblaxMessage(missions[currentMission].zorblaxCorrect);
-        const audio = new Audio("/sounds/mission.mp3");
-        audio.play().catch(()=>console.log("[next-mystery] Audio missing"));
-        setCurrentMission((prev)=>prev + 1);
+    const handleEventClick = async (info)=>{
+        const eventId = info.event.id;
+        const userName = prompt("Enter your name to vote:");
+        if (userName) {
+            try {
+                const res = await fetch(`/api/events/vote`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        eventId,
+                        userName
+                    })
+                });
+                if (!res.ok) throw new Error("Failed to vote");
+                const updatedEvents = await fetch("/api/events").then((res)=>res.json());
+                setEvents(updatedEvents);
+                setNotification(`Vote added by ${userName}!`);
+                setTimeout(()=>setNotification(""), 5000);
+            } catch (err) {
+                setError(err.message);
+            }
+        }
     };
-    if (!isClient) {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            style: {
-                textAlign: "center",
-                padding: "2rem",
-                color: "#fff"
-            },
-            children: "Loading..."
-        }, void 0, false, {
-            fileName: "[project]/app/page.js",
-            lineNumber: 233,
-            columnNumber: 12
-        }, this);
-    }
+    const handleStartCall = ()=>{
+        if (roomName.trim()) {
+            if (!jitsiLoaded) {
+                alert("Jitsi is still loading, please wait...");
+            } else {
+                setIsCallStarted(true);
+            }
+        } else {
+            alert("Please enter a room name!");
+        }
+    };
+    const toggleTheme = ()=>{
+        setTheme((prev)=>prev === "dark" ? "light" : "dark");
+    };
+    // Chatbot Logic
+    const handleChatSubmit = async (e)=>{
+        e.preventDefault();
+        if (!chatInput.trim()) return;
+        const userMessage = {
+            text: chatInput,
+            sender: "user"
+        };
+        setChatMessages([
+            ...chatMessages,
+            userMessage
+        ]);
+        setChatInput("");
+        const now = new Date();
+        const eatOffset = 3 * 60 * 60 * 1000;
+        const nowEAT = new Date(now.getTime() + eatOffset);
+        let botResponse = {
+            text: "",
+            sender: "bot"
+        };
+        if (/what time is it/i.test(chatInput)) {
+            botResponse.text = `It's currently ${nowEAT.toLocaleTimeString("en-US", {
+                timeZone: "UTC",
+                hour12: true
+            })} EAT.`;
+        } else if (/schedule|set|add/i.test(chatInput)) {
+            const timeMatch = chatInput.match(/(\d{1,2}:\d{2})\s?(AM|PM)?/i);
+            const dateMatch = chatInput.match(/(today|tomorrow|\d{4}-\d{2}-\d{2})/i);
+            const titleMatch = chatInput.match(/(schedule|set|add)\s*(.+?)\s*(at|on|for)/i);
+            if (timeMatch) {
+                let [_, timePart, period = "PM"] = timeMatch;
+                let [hours, minutes] = timePart.split(":");
+                hours = parseInt(hours);
+                if (period.toUpperCase() === "PM" && hours !== 12) hours += 12;
+                if (period.toUpperCase() === "AM" && hours === 12) hours = 0;
+                const time = `${hours.toString().padStart(2, "0")}:${minutes}`;
+                const date = dateMatch ? dateMatch[1].toLowerCase() === "today" ? nowEAT.toISOString().split("T")[0] : dateMatch[1].toLowerCase() === "tomorrow" ? new Date(nowEAT.getTime() + 24 * 60 * 60 * 1000).toISOString().split("T")[0] : dateMatch[1] : nowEAT.toISOString().split("T")[0];
+                const title = titleMatch ? titleMatch[2] : "Chatbot Event";
+                const newEvent = {
+                    title,
+                    date,
+                    time,
+                    votes: []
+                };
+                try {
+                    const res = await fetch("/api/events", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(newEvent)
+                    });
+                    if (!res.ok) throw new Error("Failed to create event");
+                    const savedEvent = await res.json();
+                    setEvents([
+                        ...events,
+                        savedEvent
+                    ]);
+                    const displayTime = `${parseInt(time.split(":")[0]) % 12 || 12}:${time.split(":")[1]} ${parseInt(time.split(":")[0]) >= 12 ? "PM" : "AM"}`;
+                    botResponse.text = `Event "${title}" scheduled for ${date} at ${displayTime} EAT!`;
+                } catch (err) {
+                    botResponse.text = "Sorry, I couldn't schedule that event. Try again!";
+                }
+            } else {
+                botResponse.text = "Please include a time (e.g., 'Schedule a meeting at 3:02 PM').";
+            }
+        } else if (/events|schedule/i.test(chatInput)) {
+            if (events.length > 0) {
+                const eventList = events.map((e)=>{
+                    const [hours, minutes] = e.time.split(":");
+                    const hours12 = parseInt(hours) % 12 || 12;
+                    const period = parseInt(hours) >= 12 ? "PM" : "AM";
+                    return `${e.title} on ${e.date} at ${hours12}:${minutes} ${period}`;
+                }).join("\n");
+                botResponse.text = `Here are your scheduled events:\n${eventList}`;
+            } else {
+                botResponse.text = "No events scheduled yet!";
+            }
+        } else {
+            botResponse.text = "Hi! I can help you schedule events or check the time. Try saying 'Schedule a meeting at 3 PM tomorrow' or 'What time is it?'";
+        }
+        setChatMessages((prev)=>[
+                ...prev,
+                botResponse
+            ]);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
-            padding: "2rem",
-            textAlign: "center",
-            background: "linear-gradient(135deg, #001a33, #003366)",
             minHeight: "100vh",
-            color: "#e0e0e0",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            backgroundImage: "radial-gradient(circle, rgba(0, 204, 255, 0.1) 2px, transparent 2px)",
-            backgroundSize: "25px 25px"
+            background: theme === "dark" ? "linear-gradient(135deg, #0a0a0a 0%, #1c2526 100%)" : "linear-gradient(135deg, #f0f0f0 0%, #d9e6e6 100%)",
+            color: theme === "dark" ? "#d4faff" : "#1c2526",
+            fontFamily: "'Orbitron', 'Roboto', sans-serif",
+            overflow: "auto",
+            position: "relative",
+            transition: "background 0.5s ease"
         },
-        className: "jsx-a7c6f87b37b4e3b4",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                style: {
-                    fontSize: "clamp(2rem, 8vw, 4rem)",
-                    color: "#00ccff",
-                    fontFamily: "'Courier New', monospace",
-                    textShadow: "0 0 10px #00ccff, 0 0 20px #00ccff",
-                    marginBottom: "1rem",
-                    animation: "pulse 1.5s infinite"
-                },
-                className: "jsx-a7c6f87b37b4e3b4",
-                children: "Cosmic Voice Command"
-            }, void 0, false, {
-                fileName: "[project]/app/page.js",
-                lineNumber: 249,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                style: {
-                    fontSize: "clamp(1.5rem, 5vw, 2rem)",
-                    color: "#fff",
-                    background: "rgba(0, 204, 255, 0.2)",
-                    padding: "0.5rem 1rem",
-                    borderRadius: "15px",
-                    border: "2px solid #00ccff",
-                    display: "inline-block",
-                    animation: "shine 2s infinite",
-                    marginBottom: "1rem"
-                },
-                className: "jsx-a7c6f87b37b4e3b4",
-                children: [
-                    "Total Score: ",
-                    totalScore
+        id: "particles-js",
+        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+            [
+                "6d6f4f03b1833620",
+                [
+                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
                 ]
-            }, void 0, true, {
-                fileName: "[project]/app/page.js",
-                lineNumber: 257,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            ]
+        ]),
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
                 style: {
-                    fontSize: "clamp(1rem, 3vw, 1.2rem)",
-                    color: "#00ccff",
-                    margin: "0 0 1rem",
-                    fontFamily: "'Courier New', monospace",
-                    maxWidth: "90%"
-                },
-                className: "jsx-a7c6f87b37b4e3b4",
-                children: "Speak or gesture to command—Zorblax demands precision in 15 seconds!"
-            }, void 0, false, {
-                fileName: "[project]/app/page.js",
-                lineNumber: 270,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                style: {
+                    position: "relative",
+                    minHeight: "70vh",
                     width: "100%",
-                    maxWidth: "800px",
-                    padding: "1rem",
-                    background: "rgba(0, 204, 255, 0.1)",
-                    borderRadius: "15px",
-                    marginBottom: "2rem",
-                    fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
-                    color: "#cceeff",
-                    fontFamily: "'Courier New', monospace",
-                    textAlign: "left",
-                    border: "1px dashed #00ccff"
+                    overflow: "hidden",
+                    border: "4px solid transparent",
+                    borderImage: theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc) 10" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600) 10",
+                    animation: "snakeRoller 6s linear infinite"
                 },
-                className: "jsx-a7c6f87b37b4e3b4",
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                    [
+                        "6d6f4f03b1833620",
+                        [
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                        ]
+                    ]
+                ]),
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                        className: "jsx-a7c6f87b37b4e3b4",
-                        children: "Zorblax:"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            background: theme === "dark" ? "radial-gradient(circle, rgba(0, 219, 255, 0.2) 0%, rgba(255, 0, 204, 0.1) 50%, transparent 70%)" : "radial-gradient(circle, rgba(255, 204, 0, 0.2) 0%, rgba(255, 102, 0, 0.1) 50%, transparent 70%)",
+                            animation: "backgroundGlow 5s ease-in-out infinite",
+                            zIndex: 0
+                        },
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                            [
+                                "6d6f4f03b1833620",
+                                [
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                ]
+                            ]
+                        ])
                     }, void 0, false, {
                         fileName: "[project]/app/page.js",
-                        lineNumber: 290,
+                        lineNumber: 395,
                         columnNumber: 9
                     }, this),
-                    " ",
-                    zorblaxMessage
-                ]
-            }, void 0, true, {
-                fileName: "[project]/app/page.js",
-                lineNumber: 277,
-                columnNumber: 7
-            }, this),
-            currentMission < 5 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                style: {
-                    width: "100%",
-                    maxWidth: "600px",
-                    padding: "1.5rem",
-                    background: "rgba(0, 51, 102, 0.8)",
-                    borderRadius: "15px",
-                    boxShadow: "0 0 20px rgba(0, 204, 255, 0.5)",
-                    border: "2px solid #00ccff"
-                },
-                className: "jsx-a7c6f87b37b4e3b4",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                        src: "/images/grandpa.jpg",
+                        layout: "fill",
+                        objectFit: "cover",
+                        alt: "Grandpa Banner",
                         style: {
-                            fontSize: "clamp(1.5rem, 4vw, 2rem)",
-                            color: "#00ccff",
-                            marginBottom: "1rem",
-                            textShadow: "0 0 5px #00ccff"
-                        },
-                        className: "jsx-a7c6f87b37b4e3b4",
-                        children: [
-                            "Mission ",
-                            currentMission + 1
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/app/page.js",
-                        lineNumber: 302,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        style: {
-                            fontSize: "clamp(1rem, 3vw, 1.2rem)",
-                            marginBottom: "1rem",
-                            color: "#99ccff"
-                        },
-                        className: "jsx-a7c6f87b37b4e3b4",
-                        children: missions[currentMission].scenario
+                            animation: "pulseScale 4s ease-in-out infinite",
+                            zIndex: 1
+                        }
                     }, void 0, false, {
                         fileName: "[project]/app/page.js",
-                        lineNumber: 308,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        style: {
-                            fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)",
-                            color: "#fff",
-                            marginBottom: "1rem"
-                        },
-                        className: "jsx-a7c6f87b37b4e3b4",
-                        children: gestureMode ? `Gesture: ${missions[currentMission].gesture}` : `Say: "${missions[currentMission].voiceCommand}"`
-                    }, void 0, false, {
-                        fileName: "[project]/app/page.js",
-                        lineNumber: 313,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        style: {
-                            fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)",
-                            color: "#fff",
-                            marginBottom: "1rem"
-                        },
-                        className: "jsx-a7c6f87b37b4e3b4",
-                        children: [
-                            "Time Left: ",
-                            timeLeft,
-                            "s"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/app/page.js",
-                        lineNumber: 322,
-                        columnNumber: 11
+                        lineNumber: 410,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "1rem",
-                            alignItems: "center"
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            background: theme === "dark" ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 0.2)",
+                            zIndex: 2
                         },
-                        className: "jsx-a7c6f87b37b4e3b4",
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                            [
+                                "6d6f4f03b1833620",
+                                [
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                ]
+                            ]
+                        ])
+                    }, void 0, false, {
+                        fileName: "[project]/app/page.js",
+                        lineNumber: 420,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform: "translate(-50%, -50%)",
+                            textAlign: "center",
+                            zIndex: 3,
+                            color: theme === "dark" ? "#ffffff" : "#1c2526",
+                            padding: "0 1rem",
+                            width: "100%",
+                            maxWidth: "1200px"
+                        },
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                            [
+                                "6d6f4f03b1833620",
+                                [
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                ]
+                            ]
+                        ]),
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setGestureMode(!gestureMode),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                 style: {
-                                    padding: "clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem)",
-                                    fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
-                                    background: gestureMode ? "#ff4444" : "#00ccff",
-                                    color: "#fff",
-                                    border: "none",
-                                    borderRadius: "10px",
-                                    cursor: "pointer",
-                                    width: "min(100%, 200px)"
+                                    fontSize: "clamp(1.5rem, 6vw, 4rem)",
+                                    fontWeight: 700,
+                                    textShadow: `2px 2px 4px ${theme === "dark" ? "rgba(0, 0, 0, 0.5)" : "rgba(255, 255, 255, 0.5)"}`,
+                                    marginBottom: "0.5rem",
+                                    animation: "typewriter 3s steps(30, end) forwards, glowPulse 2s infinite alternate",
+                                    whiteSpace: "nowrap",
+                                    overflow: "hidden",
+                                    borderRight: `3px solid ${theme === "dark" ? "#00dbff" : "#ffcc00"}`
                                 },
-                                className: "jsx-a7c6f87b37b4e3b4",
-                                children: gestureMode ? "Switch to Voice" : "Switch to Gesture"
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: "THE Legacy Behind AYANO"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.js",
-                                lineNumber: 333,
-                                columnNumber: 13
+                                lineNumber: 445,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                style: {
+                                    fontSize: "clamp(0.8rem, 2.5vw, 1.5rem)",
+                                    marginBottom: "1.5rem",
+                                    animation: "fadeInUpGlow 1.8s ease-out forwards",
+                                    animationDelay: "3.2s",
+                                    opacity: 0
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: "A quantum leap in family connectivity"
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 459,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/gallery",
+                                style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    padding: "clamp(8px, 1.5vw, 15px) clamp(15px, 3vw, 40px)",
+                                    fontSize: "clamp(0.9rem, 2vw, 1.3rem)",
+                                    color: theme === "dark" ? "#ffffff" : "#1c2526",
+                                    background: theme === "dark" ? "linear-gradient(90deg, #00dbff, #ff00cc)" : "linear-gradient(90deg, #ffcc00, #ff6600)",
+                                    border: `2px solid ${theme === "dark" ? "#00dbff" : "#ffcc00"}`,
+                                    borderRadius: "30px",
+                                    textDecoration: "none",
+                                    transition: "all 0.4s ease",
+                                    boxShadow: theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    animation: "bounceInGlow 2s ease-out forwards",
+                                    animationDelay: "3.5s",
+                                    overflow: "hidden"
+                                },
+                                onMouseOver: (e)=>{
+                                    e.target.style.transform = "scale(1.05)";
+                                    e.target.style.boxShadow = theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 60px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 60px rgba(255, 102, 0, 0.6)";
+                                    const ripple = document.createElement("span");
+                                    ripple.style.position = "absolute";
+                                    ripple.style.width = "100px";
+                                    ripple.style.height = "100px";
+                                    ripple.style.background = "rgba(255, 255, 255, 0.3)";
+                                    ripple.style.borderRadius = "50%";
+                                    ripple.style.transform = "scale(0)";
+                                    ripple.style.animation = "ripple 0.6s linear";
+                                    const rect = e.target.getBoundingClientRect();
+                                    const x = e.clientX - rect.left - 50;
+                                    const y = e.clientY - rect.top - 50;
+                                    ripple.style.left = `${x}px`;
+                                    ripple.style.top = `${y}px`;
+                                    e.target.appendChild(ripple);
+                                    setTimeout(()=>ripple.remove(), 600);
+                                },
+                                onMouseOut: (e)=>{
+                                    e.target.style.transform = "scale(1)";
+                                    e.target.style.boxShadow = theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)";
+                                },
+                                children: "Enter to Gallery"
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 470,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    position: "absolute",
+                                    top: "10px",
+                                    right: "20px",
+                                    fontSize: "clamp(1rem, 2vw, 1.5rem)",
+                                    color: theme === "dark" ? "#00dbff" : "#ff6600",
+                                    textShadow: `0 0 10px ${theme === "dark" ? "rgba(0, 219, 255, 0.7)" : "rgba(255, 102, 0, 0.7)"}`,
+                                    animation: "fadeIn 1s ease-out forwards"
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: currentTime || "Loading..."
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 526,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: recording ? stopRecording : startRecording,
+                                onClick: toggleTheme,
                                 style: {
-                                    padding: "clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem)",
-                                    fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
-                                    background: recording ? "#ff4444" : "#00ccff",
-                                    color: "#fff",
+                                    position: "absolute",
+                                    bottom: "20px",
+                                    right: "20px",
+                                    padding: "8px 16px",
+                                    fontSize: "1rem",
+                                    color: theme === "dark" ? "#ffffff" : "#1c2526",
+                                    background: theme === "dark" ? "linear-gradient(90deg, #00dbff, #ff00cc)" : "linear-gradient(90deg, #ffcc00, #ff6600)",
                                     border: "none",
-                                    borderRadius: "10px",
+                                    borderRadius: "20px",
                                     cursor: "pointer",
-                                    width: "min(100%, 200px)",
-                                    boxShadow: recording ? "0 0 15px #ff4444" : "0 0 10px #00ccff"
+                                    transition: "all 0.3s ease",
+                                    boxShadow: theme === "dark" ? "0 0 10px rgba(0, 219, 255, 0.6)" : "0 0 10px rgba(255, 204, 0, 0.6)"
                                 },
-                                className: "jsx-a7c6f87b37b4e3b4",
-                                children: recording ? "Stop" : gestureMode ? "Start Gesture" : "Start Recording"
+                                onMouseOver: (e)=>{
+                                    e.target.style.transform = "scale(1.1)";
+                                    e.target.style.boxShadow = theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.8)" : "0 0 20px rgba(255, 204, 0, 0.8)";
+                                },
+                                onMouseOut: (e)=>{
+                                    e.target.style.transform = "scale(1)";
+                                    e.target.style.boxShadow = theme === "dark" ? "0 0 10px rgba(0, 219, 255, 0.6)" : "0 0 10px rgba(255, 204, 0, 0.6)";
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: theme === "dark" ? "Light Mode" : "Dark Mode"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.js",
-                                lineNumber: 348,
+                                lineNumber: 539,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/page.js",
+                        lineNumber: 431,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            zIndex: 2,
+                            pointerEvents: "none",
+                            background: "url('https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js')",
+                            animation: "particleFlow 10s linear infinite"
+                        },
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                            [
+                                "6d6f4f03b1833620",
+                                [
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                ]
+                            ]
+                        ])
+                    }, void 0, false, {
+                        fileName: "[project]/app/page.js",
+                        lineNumber: 579,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/page.js",
+                lineNumber: 381,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+                style: {
+                    padding: "80px 20px",
+                    position: "relative",
+                    zIndex: 1
+                },
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                    [
+                        "6d6f4f03b1833620",
+                        [
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                        ]
+                    ]
+                ]),
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                        style: {
+                            marginBottom: "100px",
+                            textAlign: "center",
+                            background: theme === "dark" ? "rgba(10, 20, 30, 0.9)" : "rgba(240, 240, 240, 0.9)",
+                            borderRadius: "20px",
+                            padding: "50px",
+                            boxShadow: theme === "dark" ? "0 10px 40px rgba(0, 219, 255, 0.3), 0 0 60px rgba(0, 0, 0, 0.7)" : "0 10px 40px rgba(255, 204, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.2)",
+                            border: `1px solid ${theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)"}`
+                        },
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                            [
+                                "6d6f4f03b1833620",
+                                [
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                ]
+                            ]
+                        ]),
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                style: {
+                                    fontSize: "2.5rem",
+                                    color: theme === "dark" ? "#00dbff" : "#ff6600",
+                                    fontWeight: 600,
+                                    marginBottom: "25px",
+                                    letterSpacing: "1.5px",
+                                    textShadow: `0 0 15px ${theme === "dark" ? "rgba(0, 219, 255, 0.7)" : "rgba(255, 102, 0, 0.7)"}`
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: "Start Video Meeting"
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 610,
+                                columnNumber: 11
+                            }, this),
+                            !isCallStarted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    gap: "20px",
+                                    flexWrap: "wrap"
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "text",
+                                        value: roomName,
+                                        onChange: (e)=>setRoomName(e.target.value),
+                                        placeholder: "Enter Meeting Name",
+                                        style: {
+                                            padding: "15px 25px",
+                                            fontSize: "1.1rem",
+                                            width: "320px",
+                                            borderRadius: "30px",
+                                            border: `2px solid ${theme === "dark" ? "rgba(0, 219, 255, 0.4)" : "rgba(255, 204, 0, 0.4)"}`,
+                                            background: theme === "dark" ? "rgba(0, 20, 40, 0.8)" : "rgba(255, 255, 255, 0.8)",
+                                            color: theme === "dark" ? "#d4faff" : "#1c2526",
+                                            outline: "none",
+                                            transition: "all 0.3s ease",
+                                            boxShadow: `0 0 15px ${theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)"}`
+                                        },
+                                        onFocus: (e)=>{
+                                            e.target.style.borderColor = theme === "dark" ? "#00dbff" : "#ff6600";
+                                            e.target.style.boxShadow = `0 0 25px ${theme === "dark" ? "rgba(0, 219, 255, 0.6)" : "rgba(255, 102, 0, 0.6)"}`;
+                                        },
+                                        onBlur: (e)=>{
+                                            e.target.style.borderColor = theme === "dark" ? "rgba(0, 219, 255, 0.4)" : "rgba(255, 204, 0, 0.4)";
+                                            e.target.style.boxShadow = `0 0 15px ${theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)"}`;
+                                        },
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                            [
+                                                "6d6f4f03b1833620",
+                                                [
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                                ]
+                                            ]
+                                        ])
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/page.js",
+                                        lineNumber: 631,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            position: "relative",
+                                            display: "inline-block"
+                                        },
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                            [
+                                                "6d6f4f03b1833620",
+                                                [
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                                ]
+                                            ]
+                                        ]),
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: handleStartCall,
+                                                style: {
+                                                    padding: "15px 40px",
+                                                    fontSize: "1.1rem",
+                                                    background: theme === "dark" ? "linear-gradient(90deg, #00dbff, #ff00cc)" : "linear-gradient(90deg, #ffcc00, #ff6600)",
+                                                    border: `2px solid ${theme === "dark" ? "#00dbff" : "#ffcc00"}`,
+                                                    borderRadius: "30px",
+                                                    color: theme === "dark" ? "#ffffff" : "#1c2526",
+                                                    cursor: "pointer",
+                                                    transition: "all 0.3s ease",
+                                                    boxShadow: theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                    animation: "pulseGlow 2s infinite",
+                                                    position: "relative",
+                                                    zIndex: 2
+                                                },
+                                                onMouseOver: (e)=>{
+                                                    e.target.style.transform = "scale(1.05)";
+                                                    e.target.style.boxShadow = theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 60px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 60px rgba(255, 102, 0, 0.6)";
+                                                },
+                                                onMouseOut: (e)=>{
+                                                    e.target.style.transform = "scale(1)";
+                                                    e.target.style.boxShadow = theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)";
+                                                },
+                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                                    [
+                                                        "6d6f4f03b1833620",
+                                                        [
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                                        ]
+                                                    ]
+                                                ]),
+                                                children: "Start Meeting"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/page.js",
+                                                lineNumber: 658,
+                                                columnNumber: 17
+                                            }, this),
+                                            !jitsiLoaded && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                style: {
+                                                    position: "absolute",
+                                                    top: "-10px",
+                                                    left: "-10px",
+                                                    width: "calc(100% + 20px)",
+                                                    height: "calc(100% + 20px)",
+                                                    transform: "rotate(-90deg)",
+                                                    zIndex: 1
+                                                },
+                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                                    [
+                                                        "6d6f4f03b1833620",
+                                                        [
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                                        ]
+                                                    ]
+                                                ]),
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                                                    cx: "50%",
+                                                    cy: "50%",
+                                                    r: "45%",
+                                                    fill: "none",
+                                                    stroke: theme === "dark" ? "#00dbff" : "#ff6600",
+                                                    strokeWidth: "4",
+                                                    strokeDasharray: "283",
+                                                    strokeDashoffset: 283 - 283 * progress / 100,
+                                                    style: {
+                                                        transition: "stroke-dashoffset 0.5s ease"
+                                                    },
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                                        [
+                                                            "6d6f4f03b1833620",
+                                                            [
+                                                                theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                                theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                                theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                                                theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                                                theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                                theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                                theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                                                theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                                                theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                                                theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                                                theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                                                theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                                theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                                                theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                                theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                                theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                                                theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                                theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                                                theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                                                theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                                            ]
+                                                        ]
+                                                    ])
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.js",
+                                                    lineNumber: 709,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/page.js",
+                                                lineNumber: 698,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/page.js",
+                                        lineNumber: 657,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 623,
+                                columnNumber: 13
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                id: "meet",
+                                style: {
+                                    marginTop: "25px",
+                                    borderRadius: "15px",
+                                    overflow: "hidden",
+                                    boxShadow: `0 5px 25px ${theme === "dark" ? "rgba(0, 219, 255, 0.4)" : "rgba(255, 204, 0, 0.4)"}`,
+                                    border: `1px solid ${theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)"}`
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ])
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 725,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.js",
-                        lineNumber: 327,
-                        columnNumber: 11
+                        lineNumber: 596,
+                        columnNumber: 9
                     }, this),
-                    gestureMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
-                        ref: videoRef,
-                        autoPlay: true,
-                        muted: true,
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                         style: {
-                            width: "min(100%, 320px)",
-                            height: "min(75vw, 240px)",
-                            marginTop: "1rem",
-                            border: "2px solid #00ccff",
-                            borderRadius: "10px",
-                            transform: "scaleX(-1)" // Mirror effect
+                            textAlign: "center",
+                            background: theme === "dark" ? "rgba(10, 20, 30, 0.9)" : "rgba(240, 240, 240, 0.9)",
+                            borderRadius: "20px",
+                            padding: "50px",
+                            boxShadow: theme === "dark" ? "0 10px 40px rgba(0, 219, 255, 0.3), 0 0 60px rgba(0, 0, 0, 0.7)" : "0 10px 40px rgba(255, 204, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.2)",
+                            border: `1px solid ${theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)"}`
                         },
-                        className: "jsx-a7c6f87b37b4e3b4"
-                    }, void 0, false, {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                            [
+                                "6d6f4f03b1833620",
+                                [
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                ]
+                            ]
+                        ]),
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                style: {
+                                    fontSize: "2.5rem",
+                                    color: theme === "dark" ? "#00dbff" : "#ff6600",
+                                    fontWeight: 600,
+                                    marginBottom: "25px",
+                                    letterSpacing: "1.5px",
+                                    textShadow: `0 0 15px ${theme === "dark" ? "rgba(0, 219, 255, 0.7)" : "rgba(255, 102, 0, 0.7)"}`
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: "Set Our Schedule"
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 751,
+                                columnNumber: 11
+                            }, this),
+                            error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                style: {
+                                    color: theme === "dark" ? "#ff66cc" : "#ff3300",
+                                    fontSize: "1.2rem",
+                                    marginBottom: "25px",
+                                    textShadow: `0 0 10px ${theme === "dark" ? "rgba(255, 102, 204, 0.5)" : "rgba(255, 51, 0, 0.5)"}`
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: [
+                                    "Alert: ",
+                                    error
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 764,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    maxWidth: "1000px",
+                                    margin: "0 auto"
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fullcalendar$2f$react$2f$dist$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    plugins: [
+                                        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fullcalendar$2f$daygrid$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"],
+                                        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fullcalendar$2f$interaction$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"]
+                                    ],
+                                    initialView: "dayGridMonth",
+                                    events: events.map((event)=>{
+                                        const [hours, minutes] = event.time.split(":");
+                                        let hours12 = parseInt(hours);
+                                        const period = hours12 >= 12 ? "PM" : "AM";
+                                        hours12 = hours12 % 12 || 12;
+                                        return {
+                                            title: `${event.title} at ${hours12}:${minutes} ${period} (Votes: ${event.votes.length})`,
+                                            date: event.date,
+                                            id: event._id
+                                        };
+                                    }),
+                                    dateClick: handleDateClick,
+                                    eventClick: handleEventClick,
+                                    height: "600px",
+                                    style: {
+                                        background: theme === "dark" ? "rgba(255, 255, 255, 0.95)" : "rgba(255, 255, 255, 0.9)",
+                                        borderRadius: "15px",
+                                        boxShadow: `0 5px 25px ${theme === "dark" ? "rgba(0, 219, 255, 0.4)" : "rgba(255, 204, 0, 0.4)"}`,
+                                        border: `1px solid ${theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)"}`
+                                    }
+                                }, void 0, false, {
+                                    fileName: "[project]/app/page.js",
+                                    lineNumber: 776,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 775,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/app/page.js",
-                        lineNumber: 366,
-                        columnNumber: 13
+                        lineNumber: 738,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.js",
-                lineNumber: 293,
-                columnNumber: 9
-            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                lineNumber: 595,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: ()=>setChatOpen(!chatOpen),
                 style: {
-                    marginTop: "2rem",
+                    position: "fixed",
+                    bottom: "20px",
+                    right: "80px",
+                    width: "50px",
+                    height: "50px",
+                    background: theme === "dark" ? "linear-gradient(90deg, #00dbff, #ff00cc)" : "linear-gradient(90deg, #ffcc00, #ff6600)",
+                    border: "none",
+                    borderRadius: "50%",
+                    cursor: "pointer",
+                    boxShadow: theme === "dark" ? "0 0 15px rgba(0, 219, 255, 0.6)" : "0 0 15px rgba(255, 204, 0, 0.6)",
+                    transition: "all 0.3s ease",
+                    zIndex: 1000
+                },
+                onMouseOver: (e)=>e.target.style.transform = "scale(1.1)",
+                onMouseOut: (e)=>e.target.style.transform = "scale(1)",
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                    [
+                        "6d6f4f03b1833620",
+                        [
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                        ]
+                    ]
+                ]),
+                children: "💬"
+            }, void 0, false, {
+                fileName: "[project]/app/page.js",
+                lineNumber: 805,
+                columnNumber: 7
+            }, this),
+            chatOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    position: "fixed",
+                    bottom: "80px",
+                    right: "20px",
+                    width: "300px",
+                    height: "400px",
+                    background: theme === "dark" ? "rgba(10, 20, 30, 0.95)" : "rgba(240, 240, 240, 0.95)",
+                    borderRadius: "15px",
+                    boxShadow: theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.5)" : "0 0 20px rgba(255, 204, 0, 0.5)",
+                    zIndex: 1000,
                     display: "flex",
                     flexDirection: "column",
-                    gap: "1rem",
-                    alignItems: "center"
+                    padding: "10px"
                 },
-                className: "jsx-a7c6f87b37b4e3b4",
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                    [
+                        "6d6f4f03b1833620",
+                        [
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                        ]
+                    ]
+                ]),
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            fontSize: "clamp(1.5rem, 4vw, 2rem)",
-                            color: "#ffd700",
-                            textShadow: "0 0 10px #ffd700"
+                            flex: 1,
+                            overflowY: "auto",
+                            padding: "10px"
                         },
-                        className: "jsx-a7c6f87b37b4e3b4",
-                        children: "All Missions Complete!"
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                            [
+                                "6d6f4f03b1833620",
+                                [
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                ]
+                            ]
+                        ]),
+                        children: chatMessages.map((msg, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    margin: "5px 0",
+                                    textAlign: msg.sender === "user" ? "right" : "left"
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    style: {
+                                        display: "inline-block",
+                                        padding: "8px 12px",
+                                        background: msg.sender === "user" ? theme === "dark" ? "#00dbff" : "#ffcc00" : theme === "dark" ? "#ff00cc" : "#ff6600",
+                                        color: "#fff",
+                                        borderRadius: "10px",
+                                        maxWidth: "80%",
+                                        whiteSpace: "pre-wrap"
+                                    },
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                        [
+                                            "6d6f4f03b1833620",
+                                            [
+                                                theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                                theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                                theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                                theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                                theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                                theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                                theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                                theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                                theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                                theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                                theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                                theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                                theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                                theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                                theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                            ]
+                                        ]
+                                    ]),
+                                    children: msg.text
+                                }, void 0, false, {
+                                    fileName: "[project]/app/page.js",
+                                    lineNumber: 868,
+                                    columnNumber: 17
+                                }, this)
+                            }, index, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 861,
+                                columnNumber: 15
+                            }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/page.js",
-                        lineNumber: 389,
+                        lineNumber: 853,
                         columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/finale",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            style: {
-                                padding: "clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem)",
-                                fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
-                                background: "linear-gradient(45deg, #00ccff, #ff00ff)",
-                                color: "#fff",
-                                border: "none",
-                                borderRadius: "10px",
-                                cursor: "pointer",
-                                boxShadow: "0 0 15px #00ccff",
-                                animation: "glow 1.5s infinite alternate"
-                            },
-                            className: "jsx-a7c6f87b37b4e3b4",
-                            children: "Next Cosmic Caper!"
-                        }, void 0, false, {
-                            fileName: "[project]/app/page.js",
-                            lineNumber: 395,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                        onSubmit: handleChatSubmit,
+                        style: {
+                            display: "flex",
+                            padding: "10px"
+                        },
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                            [
+                                "6d6f4f03b1833620",
+                                [
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                ]
+                            ]
+                        ]),
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "text",
+                                value: chatInput,
+                                onChange: (e)=>setChatInput(e.target.value),
+                                placeholder: "Ask me anything...",
+                                style: {
+                                    flex: 1,
+                                    padding: "8px",
+                                    borderRadius: "10px",
+                                    border: `1px solid ${theme === "dark" ? "#00dbff" : "#ff6600"}`,
+                                    background: theme === "dark" ? "#0a141e" : "#fff",
+                                    color: theme === "dark" ? "#d4faff" : "#1c2526",
+                                    outline: "none"
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ])
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 898,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "submit",
+                                style: {
+                                    marginLeft: "10px",
+                                    padding: "8px 15px",
+                                    background: theme === "dark" ? "linear-gradient(90deg, #00dbff, #ff00cc)" : "linear-gradient(90deg, #ffcc00, #ff6600)",
+                                    border: "none",
+                                    borderRadius: "10px",
+                                    color: "#fff",
+                                    cursor: "pointer"
+                                },
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                                    [
+                                        "6d6f4f03b1833620",
+                                        [
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                                        ]
+                                    ]
+                                ]),
+                                children: "Send"
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.js",
+                                lineNumber: 913,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/app/page.js",
-                        lineNumber: 394,
+                        lineNumber: 891,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.js",
-                lineNumber: 382,
+                lineNumber: 834,
+                columnNumber: 9
+            }, this),
+            notification && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    position: "fixed",
+                    bottom: "20px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    padding: "10px 20px",
+                    background: theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                    color: theme === "dark" ? "#d4faff" : "#1c2526",
+                    borderRadius: "10px",
+                    boxShadow: `0 0 15px ${theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 204, 0, 0.5)"}`,
+                    animation: "slideUp 0.5s ease-out forwards, fadeOut 0.5s ease-out 4.5s forwards",
+                    zIndex: 1000,
+                    maxWidth: "80%",
+                    textAlign: "center"
+                },
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
+                    [
+                        "6d6f4f03b1833620",
+                        [
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                            theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                            theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                            theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                            theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                            theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                            theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                        ]
+                    ]
+                ]),
+                children: notification
+            }, void 0, false, {
+                fileName: "[project]/app/page.js",
+                lineNumber: 935,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                id: "a7c6f87b37b4e3b4",
-                children: "@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}to{transform:scale(1)}}@keyframes shine{0%{text-shadow:0 0 5px #0cf,0 0 10px #0cf,0 0 15px #fff}50%{text-shadow:0 0 10px #0cf,0 0 20px #0cf,0 0 30px #fff}to{text-shadow:0 0 5px #0cf,0 0 10px #0cf,0 0 15px #fff}}@keyframes glow{0%{box-shadow:0 0 10px #0cf}to{box-shadow:0 0 20px #f0f}}@media (width<=600px){.mission-container{padding:1rem}}"
+                id: "6d6f4f03b1833620",
+                dynamic: [
+                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)",
+                    theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                    theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)",
+                    theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)",
+                    theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+                    theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)",
+                    theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)",
+                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                    theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)",
+                    theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)",
+                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)",
+                    theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)",
+                    theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"
+                ],
+                children: `@keyframes pulseScale{0%{opacity:.9;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}to{opacity:.9;transform:scale(1)}}@keyframes backgroundGlow{0%{background:radial-gradient(circle,${theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)"} 0%,${theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)"} 50%,transparent 70%)}50%{background:radial-gradient(circle,${theme === "dark" ? "rgba(0, 219, 255, 0.3)" : "rgba(255, 204, 0, 0.3)"} 0%,${theme === "dark" ? "rgba(255, 0, 204, 0.2)" : "rgba(255, 102, 0, 0.2)"} 50%,transparent 70%)}to{background:radial-gradient(circle,${theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)"} 0%,${theme === "dark" ? "rgba(255, 0, 204, 0.1)" : "rgba(255, 102, 0, 0.1)"} 50%,transparent 70%)}}@keyframes typewriter{0%{width:0}to{border-right:none;width:100%}}@keyframes glowPulse{0%{text-shadow:0 0 5px ${theme === "dark" ? "rgba(0, 219, 255, 0.5)" : "rgba(255, 102, 0, 0.5)"}}to{text-shadow:0 0 15px ${theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 102, 0, 0.8)"},0 0 25px ${theme === "dark" ? "rgba(255, 0, 204, 0.5)" : "rgba(255, 51, 0, 0.5)"}}}@keyframes fadeInUpGlow{0%{opacity:0;text-shadow:0 0 5px ${theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)"};transform:translateY(30px)}to{opacity:1;text-shadow:0 0 15px ${theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)"};transform:translateY(0)}}@keyframes bounceInGlow{0%{opacity:0;box-shadow:0 0 5px ${theme === "dark" ? "rgba(0, 219, 255, 0.2)" : "rgba(255, 204, 0, 0.2)"};transform:scale(.5)}50%{opacity:1;box-shadow:0 0 30px ${theme === "dark" ? "rgba(0, 219, 255, 0.8)" : "rgba(255, 204, 0, 0.8)"};transform:scale(1.1)}70%{transform:scale(.95)}to{opacity:1;box-shadow:${theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)"};transform:scale(1)}}@keyframes pulseGlow{0%{box-shadow:${theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)"}}50%{box-shadow:${theme === "dark" ? "0 0 30px rgba(0, 219, 255, 0.8), 0 0 50px rgba(255, 0, 204, 0.6)" : "0 0 30px rgba(255, 204, 0, 0.8), 0 0 50px rgba(255, 102, 0, 0.6)"}}to{box-shadow:${theme === "dark" ? "0 0 20px rgba(0, 219, 255, 0.6), 0 0 40px rgba(255, 0, 204, 0.4)" : "0 0 20px rgba(255, 204, 0, 0.6), 0 0 40px rgba(255, 102, 0, 0.4)"}}}@keyframes snakeRoller{0%{border-image-source:${theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"}}50%{border-image-source:${theme === "dark" ? "linear-gradient(225deg, #ff00cc, #00dbff, #ff00cc, #00dbff)" : "linear-gradient(225deg, #ff6600, #ffcc00, #ff6600, #ffcc00)"}}to{border-image-source:${theme === "dark" ? "linear-gradient(45deg, #00dbff, #ff00cc, #00dbff, #ff00cc)" : "linear-gradient(45deg, #ffcc00, #ff6600, #ffcc00, #ff6600)"}}}@keyframes particleFlow{0%{background-position:0 0}to{background-position:100% 100%}}@keyframes ripple{to{opacity:0;transform:scale(4)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes slideUp{0%{opacity:0;transform:translate(-50%)translateY(100px)}to{opacity:1;transform:translate(-50%)translateY(0)}}@keyframes fadeOut{0%{opacity:1}to{opacity:0}}@media (width<=768px){header{min-height:50vh}}@media (width<=480px){header{min-height:40vh}}`
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.js",
-        lineNumber: 237,
+        lineNumber: 365,
         columnNumber: 5
     }, this);
 }

@@ -9,9 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@heroicons/react": "^2.2.0",
+    "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.0",
+    "dotenv": "^16.4.7",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.1",
     "next": "^15.2.1",
+    "next-auth": "^4.24.11",
+    "pusher": "^5.2.0",
+    "pusher-js": "^8.4.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
